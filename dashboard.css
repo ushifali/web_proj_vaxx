@@ -1,0 +1,161 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main_content_text {
+    margin: 30px 50px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 25px;
+}
+
+#covid_count_info {
+    margin: 0px;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    /* box-shadow: inset rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px; */
+
+}
+
+#covid_count1,
+#covid_count2,
+#covid_count3,
+#covid_count4 {
+    color: #fff;
+
+    height: 90px;
+    width: 250px;
+    border-radius: 3px;
+
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-theme);
+
+}
+
+.covid_count {
+    text-align: center;
+    color: var(--light-green);
+    width: 100px;
+    padding-bottom: 10px;
+    font-family: "Pacifico", cursive;
+
+    text-shadow: 0 0 3px #000000, 0 0 1px #000000;
+
+    font-size: 3em;
+}
+
+.covid_count_content {
+
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+
+#graph_analysis {
+
+    margin: 40px;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+
+#piechart {
+    box-shadow: 3.4px 6.9px 6.9px hsl(0deg 0% 0% / 0.39);
+
+    box-sizing: content-box;
+    background-color: var(--dark-theme);
+
+    width: 100% !important;
+    max-width: 440px;
+    height: 220px !important;
+
+    padding: 20px 10px 40px 20px;
+    margin: 10px;
+    border: 1px solid var(--border-grey);
+}
+
+#barchart,
+#horizontalbarchart {
+    box-shadow: 3.4px 6.9px 6.9px hsl(0deg 0% 0% / 0.39);
+
+    box-sizing: content-box;
+    background-color: var(--dark-theme);
+    width: 100% !important;
+    height: 230px !important;
+    max-width: 440px;
+
+
+    padding: 20px 10px 40px 20px;
+    margin: 10px;
+    border: 1px solid var(--border-grey);
+}
+
+#content_arrange {
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+@media only screen and (max-width: 1000px) {
+
+
+    #covid_count_info {
+        height: 40%;
+        display: flex;
+        align-items: center;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    #covid_count1,
+    #covid_count2,
+    #covid_count3 {
+        margin: 5px;
+    }
+
+    #content_arrange {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #graph_analysis {
+        width: 90vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #covid_count_info {
+        height: 40%;
+        display: flex;
+        align-items: center;
+        align-content: flex-end;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #covid_count1,
+    #covid_count2,
+    #covid_count3 {
+        margin: 5px;
+    }
+}

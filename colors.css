@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --dark-theme: #0f1c26;
+    --light-theme: #fdfff7;
+    --light-green: #c7fa51;
+    --border-grey: #e0e4e8;
+    --light-orange: ##fabe51;
+    --dark-green: #00bf72;
+}
