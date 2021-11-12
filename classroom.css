@@ -1,5 +1,5 @@
 #classroom_submit {
-    font-size:20px;
+    font-size: 20px;
     letter-spacing: 2px;
     padding: 25px;
     color: var(--light-theme);
@@ -34,6 +34,16 @@ select {
 }
 
 #graph_analysis {
-    height: 0px !important;
-    margin: 0px !important;
+    height: 100%;
+}
+
+.thead-dark th {
+    color: var(--light-theme) !important;
+    background-color: var(--dark-theme) !important;
+    border-color: var(--dark-theme) !important;
+}
+
+table { 
+    font-size: 18px !important;
+    box-shadow: 3.4px 6.9px 6.9px hsl(0deg 0% 0% / 0.39);
 }

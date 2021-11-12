@@ -19,6 +19,7 @@ body {
 }
 
 .container {
+    margin: 40px 0;
     width: 85%;
     background: #fff;
     border-radius: 6px;
@@ -86,9 +87,9 @@ body {
 }
 
 .content .right-side .topic-text {
-    font-size: 23px;
+    font-size: 28px;
     font-weight: 600;
-    color: var(--dark-green);
+    color: var(--dark-theme);
 }
 
 .right-side .input-box {
@@ -181,4 +182,3 @@ body {
         margin-left: 0;
     }
 }
-
