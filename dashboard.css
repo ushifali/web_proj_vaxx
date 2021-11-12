@@ -64,7 +64,6 @@ body {
 #graph_analysis {
 
     margin: 40px;
-    height: 70vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -106,6 +105,7 @@ body {
 }
 
 #content_arrange {
+    
     display: flex;
     flex-direction: row;
 

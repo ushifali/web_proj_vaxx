@@ -33,9 +33,6 @@ select {
     cursor: pointer;
 }
 
-#graph_analysis {
-    height: 100%;
-}
 
 .thead-dark th {
     color: var(--light-theme) !important;
