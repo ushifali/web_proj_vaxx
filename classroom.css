@@ -1,5 +1,4 @@
 #classroom_submit {
-    margin: 5px;
     padding: 25px;
     background-color: var(--light-theme);
     border-color: var(--border-color);
@@ -10,9 +9,15 @@
 
 #classroom_submit_btn {
     padding: 5px;
+    border:none;
 }
 
 
 #classroom_submit_btn:hover {
     cursor: pointer;
+}
+
+#graph_analysis {
+    height: 0px !important;
+    margin: 0px !important;
 }
