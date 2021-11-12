@@ -69,6 +69,7 @@
     min-width: 78px;
     text-align: center;
     line-height: 50px;
+    color: var(--dark-theme);
 }
 
 .sidebar .logo-details .logo_name {
