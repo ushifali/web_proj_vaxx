@@ -1,0 +1,18 @@
+#classroom_submit {
+    margin: 5px;
+    padding: 25px;
+    background-color: var(--light-theme);
+    border-color: var(--border-color);
+    justify-content: space-evenly;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#classroom_submit_btn {
+    padding: 5px;
+}
+
+
+#classroom_submit_btn:hover {
+    cursor: pointer;
+}
