@@ -1,6 +1,9 @@
 #classroom_submit {
+    font-size:20px;
+    letter-spacing: 2px;
     padding: 25px;
-    background-color: var(--light-theme);
+    color: var(--light-theme);
+    background-color: var(--dark-theme);
     border-color: var(--border-color);
     justify-content: space-evenly;
     display: flex;
@@ -8,8 +11,21 @@
 }
 
 #classroom_submit_btn {
-    padding: 5px;
-    border:none;
+    letter-spacing: 2px;
+
+    font-size: 1.2em !important;
+    padding: 3px 25px;
+    border: none;
+    background-color: var(--light-theme);
+    color: var(--dark-theme);
+    box-shadow: 1.4px 4.9px 3.9px hsl(0deg 0% 0% / 0.19);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+select {
+    padding: 10px;
+    border: grey solid 1px;
 }
 
 
