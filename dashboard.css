@@ -85,7 +85,6 @@ body {
 
     padding: 20px 10px 40px 20px;
     margin: 10px;
-    border: 1px solid var(--border-grey);
 }
 
 #barchart,
@@ -101,7 +100,6 @@ body {
 
     padding: 20px 10px 40px 20px;
     margin: 10px;
-    border: 1px solid var(--border-grey);
 }
 
 #content_arrange {
