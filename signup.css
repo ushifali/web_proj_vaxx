@@ -7,7 +7,7 @@
 }
 
 #login_content {
-
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,6 +33,7 @@
 
 
 #login_page {
+
     width: 80vw;
     max-width: 70vh;
 
@@ -40,6 +41,8 @@
     padding: min(10%, 40px);
 
     background-color: white;
+
+    box-shadow: 3.4px 6.9px 6.9px hsl(0deg 0% 0% / 0.39);
 
 }
 
@@ -65,8 +68,8 @@ input {
     width: 200px;
     font-size: 15px;
 
-
-    border: 1px solid #aec0b9;
+    border: none;
+    border-bottom: 1px solid #aec0b9;
 
     /* to give a smooth transition of transform */
 
@@ -83,7 +86,8 @@ input:focus {
 
 }
 
-input[type="text"] ,input[type="password"] {
+input[type="text"],
+input[type="password"] {
     text-indent: 20px;
 
 }
