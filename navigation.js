@@ -8,8 +8,14 @@ for (var i = 0; i < arrow.length; i++) {
 }
 
 let sidebar = document.querySelector(".sidebar");
-let sidebarBtn = document.querySelector(".bx-menu");
+let sidebarBtn = document.querySelector("#nav_bar1");
 console.log(sidebarBtn);
 sidebarBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 });
+
+let navbtn = document.querySelector("#nav_btn");
+nav_btn.onclick = () => {
+        sidebar.classList.toggle("close");
+
+}

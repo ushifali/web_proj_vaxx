@@ -101,8 +101,8 @@ input[type="password"] {
     width: 200px;
     border: none;
 
-
-    font-family: "Yomogi", cursive;
+/* 
+    font-family: "Yomogi", cursive; */
     font-weight: bolder;
     font-size: large;
 
@@ -131,9 +131,3 @@ input[type="password"] {
     color: var(--dark-theme);
 }
 
-@media only screen and (max-width: 1000px) {
-
-    #login_content {
-        height: 125vh;
-    }
-}

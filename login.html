@@ -40,6 +40,7 @@
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
                 </a>
+                
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
                 </ul>
@@ -81,7 +82,7 @@
 
 
 
-            <li >
+            <li>
                 <a href="contact.html">
                     <i class="fas fa-address-book"></i>
                     <span class="link_name">Contact Us</span>
@@ -101,6 +102,7 @@
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Sign Up</span>
+            <!-- <button>Register</button> -->
         </div>
 
         <div id="login_content">
@@ -111,29 +113,30 @@
         
             <div id="login_page">
         
+                <!-- k for some reason live server doesnt redirect when method is post so dont use liver server while debug on input page -->
+                <!-- also the same issue is still unsolved in github -->
         
-                <form id="login_info" method="post" action="#">
+                <!-- k u can use liveserver on tghe page but still cant redirect from login to inputform page -->
         
-                    <h1>Sign Up</h1><br>
+        
+                <form id="login_info" method="post" action="inputform.html">
+        
+                    <h1>Log In</h1><br>
         
                     <p>Welcome to Vaxx <br></p>
         
                     <div id="inputsection">
         
                         <label for="username">Username:</label>
-                        <input type="text" id="username" required autocomplete="on"><br>
-        
+                        <input type="text" id="username"  required autocomplete="on"><br>
         
                         <label for="password">Password:</label>
-                        <input type="password" id="password"required>
+                        <input type="password" id="password"required autocomplete="on">
                         <br>
         
-                        <label for="password"> Re-enter Password:</label>
-                        <input type="password" id="password" required >
-        
                         <br>
-                        <button id="login_submit" type="submit">Sign In</button><br>
-                        <a href="login.html" id="new_user"> Already have an account? Log in</a>
+                        <button id="login_submit" type="submit">LOG IN</button><br>
+                        <a href="signup.html" id="new_user"> No account? Create an account.</a>
                     </div>
         
                 </form>
@@ -144,7 +147,7 @@
         </div>
 
 
-       
+
 
         <footer>
             <div class="content">
@@ -196,7 +199,7 @@
         </footer>
     </section>
 
-<script type="text/javascript" src="signup.js"></script>
+    <script type="text/javascript" src="signup.js"></script>
     <script type="text/javascript" src="navigation.js"></script>
     <script type="text/javascript" src="dashboard.js"></script>
 </body>

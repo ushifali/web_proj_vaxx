@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#nav_btn {
+    display: none;
+}
+
 .home-section {
     position: relative;
     background: #E4E9F7;
@@ -322,8 +326,50 @@
     font-weight: 600;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 650px) {
+    .sidebar.close {
+        width: 100%;
+        height: 83px;
+    }
+
+    #nav_btn {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: 380px
+    }
+
     .sidebar.close .nav-links li .sub-menu {
         display: none;
+    }
+
+    .sidebar.close .nav-links {
+        display: none;
+    }
+
+    .home-section .home-content i {
+        display: none;
+    }
+
+    .sidebar.close~.home-section {
+        left: 0px;
+        width: 100%;
+    }
+
+    .home-section .home-content {
+        justify-content: space-around;
+        align-items: flex-end;
+    }
+
+
+    .sidebar .nav-links{
+        width: 100%;
     }
 }
