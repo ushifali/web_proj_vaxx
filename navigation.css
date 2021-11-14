@@ -363,13 +363,21 @@
         width: 100%;
     }
 
+    .home-section {
+        left: 0px;
+        width: 100%;
+    }
+
     .home-section .home-content {
         justify-content: space-around;
         align-items: flex-end;
     }
 
+    .sidebar.close .logo-details .logo_name {
+        opacity: 1;
+    }
 
-    .sidebar .nav-links{
+    .sidebar .nav-links {
         width: 100%;
     }
 }

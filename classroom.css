@@ -8,6 +8,7 @@
     justify-content: space-evenly;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 20px;
 }
 
 #classroom_submit_btn {
@@ -40,7 +41,7 @@ select {
     border-color: var(--dark-theme) !important;
 }
 
-table { 
+table {
     font-size: 18px !important;
     box-shadow: 3.4px 6.9px 6.9px hsl(0deg 0% 0% / 0.39);
 }
