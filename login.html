@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="login.css">
 
     <script src="jquery-3.5.1.min.js"></script>
 
@@ -40,7 +41,7 @@
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
                 </a>
-                
+
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
                 </ul>
@@ -106,44 +107,47 @@
         </div>
 
         <div id="login_content">
-        
+
             <!-- image as a link. on clicking image it will lead to the link in the tag -->
             <!-- <a href="dashboard.html"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
-        
-        
+
+
             <div id="login_page">
-        
+
                 <!-- k for some reason live server doesnt redirect when method is post so dont use liver server while debug on input page -->
                 <!-- also the same issue is still unsolved in github -->
-        
+
                 <!-- k u can use liveserver on tghe page but still cant redirect from login to inputform page -->
-        
-        
+
+
                 <form id="login_info" method="post" action="inputform.html">
-        
+
                     <h1>Log In</h1><br>
-        
+
                     <p>Welcome to Vaxx <br></p>
-        
+
                     <div id="inputsection">
-        
+
                         <label for="lusername">Username:</label>
-                        <input type="text" id="username"  required autocomplete="on" onchange="validateUsername(value)"><br>
-        
+                        <input type="text" id="username" required autocomplete="on"
+                            onchange="validateUsername(value)"><br>
+                        <p id="login_username_warning">Username should be your USN</p>
+                        
                         <label for="lpassword">Password:</label>
-                        <input type="password" id="password"required autocomplete="on">
+                        <input type="password" id="password" required autocomplete="on">
+
                         <br>
-        
+
                         <br>
                         <button id="login_submit" type="submit">LOG IN</button><br>
                         <a href="signup.html" id="new_user"> No account? Create an account.</a>
                     </div>
-        
+
                 </form>
-        
-        
+
+
             </div>
-        
+
         </div>
 
 
@@ -198,9 +202,9 @@
             </div>
         </footer>
     </section>
-<script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="login.js"></script>
     <script type="text/javascript" src="navigation.js"></script>
-    
+
 </body>
 
 </html>

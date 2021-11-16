@@ -18,8 +18,7 @@
 }
 
 #logo {
-    color: var(--light-green);
-    text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+    
     font-size: 2.3em;
 
     text-align: center;
@@ -28,6 +27,7 @@
 }
 
 #logo:hover {
+    text-shadow: none;
     cursor: pointer;
     color: var(--dark-green);
 }

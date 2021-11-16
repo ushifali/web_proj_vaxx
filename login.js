@@ -9,15 +9,17 @@ function sleep(ms) {
 // make sure u link js at the end cause it needs to execute after thehe element is created NOT BEFORE!!!
 // ELSE ERROR SAYING username value is null
 var username_value = document.getElementById('username');
+var username_alert = document.getElementById('login_username_warning');
 
 async function validateUsername(value) {
-    if(value.match(/4nm\d{2}\w{2}\d{3}/))
-    alert("yes a valid username");
-    else
-    {
+    if (value.match(/4nm\d{2}\w{2}\d{3}/))
+        alert("yes a valid username");
+    else {
         alert("not allowed");
+        username_alert.style.display = "block";
         // give a sleep interval
         await sleep(1000);
         username_value.value = "";
+
     }
 }
