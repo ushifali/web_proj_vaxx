@@ -17,3 +17,14 @@ html {
 h1 {
     text-align: center;
 }
+
+#video {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+iframe {
+    border: none;
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    padding: 15px;
+}
