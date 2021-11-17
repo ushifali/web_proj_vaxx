@@ -1,5 +1,19 @@
-#header {
-    background-image: url('images/homepagehead.jpg');
+html {
+    scroll-behavior: smooth;
+}
+
+.parallax {
+    background: url('images/homepagehead.jpg') repeat fixed 100%;
     background-size: cover;
-    height: 100vh;
+    color: aliceblue;
+
+}
+
+.parallax-inner {
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+h1 {
+    text-align: center;
 }
