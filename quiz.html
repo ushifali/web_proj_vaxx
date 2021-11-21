@@ -1,96 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quiz.css">
-    <title>Document</title>
+
+    <!-- Content Type Meta tag -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--Responsive Viewport Meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+    <title>QUIZ-lette</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="quiz.css">
+
 </head>
 
-<body onload="NextQuestion(0)">
-    <main>
-        <!-- creating a modal for when quiz ends -->
-        <div class="modal-container" id="score-modal">
+<body>
 
-            <div class="modal-content-container">
+    <header>
+        <h1> SELF - ASSESSMENT TEST FOR COVID</h1>
 
-                <h1>Test Completed.</h1>
+        <button onclick="catAndQuest()" id="start"> START</button>
+    </header>
 
-                <div class="grade-details">
-                    <p>Attempts : 10</p>
-                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
-                    <p>Right Answers : <span id="right-answers"></span></p>
-                    <p>Grade : <span id="grade-percentage"></span>%</p>
-                    <p><span id="remarks"></span></p>
-                </div>
 
-                <div class="modal-button-container">
-                    <button onclick="closeScoreModal()">Continue</button>
-                </div>
-
-            </div>
+    <div class="container">
+        <div id="questions">
+            <div id="count"></div>
+            <div id="category"></span> </div>
+            <div id="quest"> </div>
+            <button onclick="answer(true)" style="display:none;" id="answerT"> YES</button>
+            <button onclick="answer(false)" style="display:none;" id="answerF"> NO </button>
+            <div id="points"></div>
         </div>
-        <!-- end of modal of quiz details-->
-
-        <div class="game-quiz-container">
-
-            <div class="game-details-container">
-                <h1><span id="player-score"></span></h1>
-                <h1> Question : <span id="question-number"></span> / 10</h1>
-            </div>
-
-            <div class="game-question-container">
-                <h1 id="display-question"></h1>
-            </div>
-
-            <div class="game-options-container">
-
-                <div class="modal-container" id="option-modal">
-
-                    <div class="modal-content-container">
-                        <h1>Please Pick An Option</h1>
-
-                        <div class="modal-button-container">
-                            <button onclick="closeOptionModal()">Continue</button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <span>
-                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
-                    <label for="option-one" class="option" id="option-one-label"></label>
-                </span>
+        <div id="winner" style="display:none;">YOU HAVE SCORED FULL <br> POSSIBILITY IS HIGH</div>
+        <div id="looser" style="display:none;">Sorry, no more questions.<br> You lose!</div>
+        <button onclick="restart()" style="display:none;" id="reset"> PLAY AGAIN? </button>
+    </div>
+    </div>
 
 
-                <span>
-                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
-                    <label for="option-two" class="option" id="option-two-label"></label>
-                </span>
-
-
-                <span>
-                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
-                    <label for="option-three" class="option" id="option-three-label"></label>
-                </span>
-
-
-                <span>
-                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
-                    <label for="option-four" class="option" id="option-four-label"></label>
-                </span>
-
-
-            </div>
-
-            <div class="next-button-container">
-                <button onclick="handleNextQuestion()">Next Question</button>
-            </div>
-
-        </div>
-    </main>
+    <!-- JavaScript -->
     <script src="quiz.js"></script>
 </body>
+
 </html>
