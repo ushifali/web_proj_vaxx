@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="classroom.css">
 
+    <!-- link to aos git library -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -153,12 +157,12 @@
 
             <div id="content_arrange">
 
-                <div id="graph_analysis">
+                <div id="graph_analysis" data-aos="fade-right">
                     <div id="pie_chat_for_vaccines_taken">
                         <canvas id="piechart"></canvas>
                     </div>
 
-                    <div id="branch_wise_vaccinated_bar_chart">
+                    <div id="branch_wise_vaccinated_bar_chart " data-aos="fade-left">
                         <canvas id="barchart"></canvas>
                     </div>
 
@@ -170,7 +174,7 @@
             <div id="main_content_text">The vaccination status of every student is as below:
             </div>
             
-            <div class="container table-responsive py-5">
+            <div class="container table-responsive py-5" data-aos="zoom-out">
                 <table class="table table-bordered table-hover table-striped">
                     <thead class="thead-dark" >
                         <tr>
@@ -273,6 +277,13 @@
 
     <script type="text/javascript" src="navigation.js"></script>
     <script type="text/javascript" src="dashboard.js"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+    </script>
 </body>
 
 </html>

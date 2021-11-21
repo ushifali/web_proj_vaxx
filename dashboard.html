@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="colors.css">
-
+    
+    <!-- link to aos git library -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 
@@ -120,22 +123,22 @@
     
       <div id="covid_count_info">
        
-        <div id="covid_count1">
+        <div id="covid_count1" data-aos="fade-right">
           <span class="covid_count">340</span>
           <span class="covid_count_content"> Are Fully Vaccinated</span>
         </div>
     
-        <div id="covid_count2">
+        <div id="covid_count2" data-aos="fade-right">
           <span class="covid_count">270</span>
           <span class="covid_count_content"> Are Patially Vaccinated</span>
         </div>
     
-        <div id="covid_count3">
+        <div id="covid_count3" data-aos="fade-left">
           <span class="covid_count">40</span>
           <span class="covid_count_content"> Are Not Vaccinated !!</span>
         </div>
     
-        <div id="covid_count4">
+        <div id="covid_count4" data-aos="fade-left">
           <span class="covid_count">60</span>
           <span class="covid_count_content"> Tested And Negative !!</span>
         </div>
@@ -147,13 +150,13 @@
         
         
         <div id="graph_analysis">
-          <div id="pie_chat_for_vaccines_taken">
+          <div id="pie_chat_for_vaccines_taken" data-aos="fade-right">
             <canvas id="piechart"></canvas>
           </div>
 
           
     
-          <div id="branch_wise_vaccinated_bar_chart">
+          <div id="branch_wise_vaccinated_bar_chart" data-aos="fade-left">
             <canvas id="barchart"></canvas>
           </div>
     
@@ -161,7 +164,7 @@
                 <img src="images/vaccine-vaccination.jpg">
               </div> -->
     
-          <div id="branch_wise_not_vaccinated_bar_chart">
+          <div id="branch_wise_not_vaccinated_bar_chart" data-aos="zoom-in">
             <canvas id="horizontalbarchart"></canvas>
           </div>
         </div>
@@ -226,5 +229,13 @@
  
   <script type="text/javascript" src="navigation.js"></script> 
   <script type="text/javascript" src="dashboard.js"></script>
-</body>
+  <!-- js for aos library -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({      
+      duration: 1000
+    });
+  </script>
+  
+  </body>
 </html>
