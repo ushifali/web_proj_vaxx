@@ -12,7 +12,7 @@ var username_value = document.getElementById('username');
 var username_alert = document.getElementById('login_username_warning');
 
 async function validateUsername(value) {
-    if (value.match(/4nm\d{2}\w{2}\d{3}/))
+    if (value.match(/^4nm\d{2}\w{2}\d{3}$/))
         alert("yes a valid username");
     else {
         alert("not allowed");

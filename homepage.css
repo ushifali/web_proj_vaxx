@@ -189,8 +189,7 @@ iframe {
 
 
 @media (max-width: 1100px) {
-    #arrange_precaution_content
-    {
+    #arrange_precaution_content {
         flex-direction: column;
     }
 }
@@ -205,3 +204,4 @@ iframe {
         letter-spacing: 10px;
     }
 }
+
