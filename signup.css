@@ -89,6 +89,7 @@ input:focus {
 input[type="text"],
 input[type="password"] {
     text-indent: 20px;
+    text-align: center;
 
 }
 
@@ -101,7 +102,7 @@ input[type="password"] {
     width: 200px;
     border: none;
 
-/* 
+    /* 
     font-family: "Yomogi", cursive; */
     font-weight: bolder;
     font-size: large;
@@ -130,4 +131,3 @@ input[type="password"] {
     transform: scale(1.1);
     color: var(--dark-theme);
 }
-
