@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="colors.css">
-    <link rel="stylesheet" href="inputform.css"
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="inputform.css" <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- linking jquery by cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -186,8 +186,15 @@
                             <label for="dose1">When was your first dose?</label>
                             <input type="date" id="dose1" placeholder="1st Dose"><br><br>
 
-                            <label for="dose2">When was your second dose?</label>
-                            <input type="date" id="dose1" placeholder="2nd Dose"><br><br>
+                            <label for="vacc_2" name="vacc_2">Have you taken second dose?</label>
+                            <input id="vacc_2_yes" type="radio" name="vacc_2" value="yes">Yes
+                            <input id="vacc_2_no" type="radio" name="vacc_2" value="no">No
+
+                            <div id="option_block_3">
+                                <label for="dose2">When was your second dose?</label>
+                                <input type="date" id="dose1" placeholder="2nd Dose"><br><br>
+                            </div>
+
                         </div>
 
 
