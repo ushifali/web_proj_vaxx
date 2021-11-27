@@ -60,7 +60,7 @@ label {
     letter-spacing: 2px;
     font-size: 18px;
     font-weight: bold;
-    
+
 }
 
 input {
@@ -103,7 +103,7 @@ input[type="password"] {
     width: 200px;
     border: none;
 
-/* 
+    /* 
     font-family: "Yomogi", cursive; */
     font-weight: bolder;
     font-size: large;
@@ -122,4 +122,9 @@ input[type="password"] {
 #option_block_1,
 #option_block_2 {
     display: none;
+}
+
+select {
+    padding: 10px ;
+    border: grey solid 1px;
 }
