@@ -39,10 +39,10 @@
 
         <ul class="nav-links">
 
-            <li >
+            <li>
                 <a href=" dashboard.html">
-                <i class='bx bx-grid-alt'></i>
-                <span class="link_name">Dashboard</span>
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
                 </a>
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
@@ -72,7 +72,7 @@
 
 
 
-            <li >
+            <li>
                 <a href="signup.html">
                     <i class="fas fa-sign-in-alt"></i>
                     <span class="link_name">Sign Up</span>
@@ -95,7 +95,7 @@
 
 
 
-            <li >
+            <li>
                 <a href="contact.html">
                     <i class="fas fa-address-book"></i>
                     <span class="link_name">Contact Us</span>
@@ -120,97 +120,97 @@
         </div>
 
         <div id="login_content">
-        
+
             <!-- image as a link. on clicking image it will lead to the link in the tag -->
             <!-- <a href="dashboard.html"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
-        
-        
+
+
             <div id="login_page">
-        
-        
-                <form id="login_info" method="post" action="#">
-        
+
+
+                <form id="login_info" method="POST" action="i.php">
+
                     <h1>Register</h1>
-        
+
                     <form id="inputsection">
-        
+
                         <label for="username">USN:</label>
-                        <input type="text" id="username" required autocomplete="on"><br><br>
-                        
+                        <input type="text" id="username" name="username" required autocomplete="on"><br><br>
+
                         <label for="name">Name:</label>
-                <input type="text" id="name" required autocomplete="on"><br><br>
+                        <input type="text" id="name" name="uname" required autocomplete="on"><br><br>
 
-                <label for="email">Email-id:</label>
-                <input type="email" id="name" required autocomplete="on"><br><br>
+                        <label for="email">Email-id:</label>
+                        <input type="email" id="name" name="email" required autocomplete="on"><br><br>
 
-                <label for="branch">Branch:</label><br>
+                        <label for="branch">Branch:</label><br>
 
-                <select id="branch">
-                    <option value="none" selected disabled none>Select a branch</option>
-                    <option value="CSE">Computer Science and Engineering</option>
-                    <option value="ISE">Information Science and Engineering</option>
-                    <option value="ECE">Electronics and Communications Engineering</option>
-                    <option value="EEE">Electrical and Electronics Engineering</option>
-                    <option value="BT">Biotechnology Engineering</option>
-                </select>
-                <br><br>
-        
-                <label for="year">Year:</label><br>
+                        <select id="branch" name="branch" required>
+                            <option value="none" selected disabled none>Select a branch</option>
+                            <option value="CSE">Computer Science and Engineering</option>
+                            <option value="ISE">Information Science and Engineering</option>
+                            <option value="ECE">Electronics and Communications Engineering</option>
+                            <option value="EEE">Electrical and Electronics Engineering</option>
+                            <option value="BT">Biotechnology Engineering</option>
+                        </select>
+                        <br><br>
 
-                <select id="year">
-                    <option value="none" selected disabled none>Select a year</option>
-                    <option value="1">1st Year</option>
-                    <option value="2">2nd Year</option>
-                    <option value="3">3rd Year</option>
-                    <option value="4">4th Year</option>
-                </select>
-                <br><br>
+                        <label for="year">Year:</label><br>
 
-                <label for="vacc">Have you been vaccinated?</label>
-                <input id="vacc_yes" type="radio" name="vacc" value="yes">Yes
-                <input id="vacc_no" type="radio" name="vacc" value="no">No
-            
+                        <select id="year" name="years">
+                            <option value="none" selected disabled none>Select a year</option>
+                            <option value="1">1st Year</option>
+                            <option value="2">2nd Year</option>
+                            <option value="3">3rd Year</option>
+                            <option value="4">4th Year</option>
+                        </select>
+                        <br><br>
+
+                        <label for="vacc" name="vacc">Have you been vaccinated?</label>
+                        <input id="vacc_yes" type="radio" name="vacc" value="yes">Yes
+                        <input id="vacc_no" type="radio" name="vacc" value="no">No
 
 
-            <div id="option_block_1">
-                <label for="vaccination">You are vaccinated with?</label><br>
 
-                <select id="vaccination">
-                    <option value="none" selected disabled none>Select a vaccination</option>
-                    <option value="1">Covishield</option>
-                    <option value="2">Covaxin</option>
-                    <option value="3">Sputnik</option>
-                </select><br><br>
+                        <div id="option_block_1">
+                            <label for="vaccination">You are vaccinated with?</label><br>
 
-                <label for="dose1">When was your first dose?</label>
-                <input type="date" id="dose1" placeholder="1st Dose"><br><br>
+                            <select id="vaccination">
+                                <option value="none" selected disabled none>Select a vaccination</option>
+                                <option value="1">Covishield</option>
+                                <option value="2">Covaxin</option>
+                                <option value="3">Sputnik</option>
+                            </select><br><br>
 
-                <label for="dose2">When was your second dose?</label>
-                <input type="date" id="dose1" placeholder="2nd Dose"><br><br>
+                            <label for="dose1">When was your first dose?</label>
+                            <input type="date" id="dose1" placeholder="1st Dose"><br><br>
+
+                            <label for="dose2">When was your second dose?</label>
+                            <input type="date" id="dose1" placeholder="2nd Dose"><br><br>
+                        </div>
+
+
+                        <div id="option_block_2">
+                            <label for="reason">If not vaccinated, Reason:</label>
+                            <input type="text" id="reason" placeholder="Why?"><br><br>
+                        </div>
+
+
+
+                        <div class="sub_butt">
+                            <button type="submit" id="login_submit" form="login_info" value="Submit">Submit</button>
+                        </div>
+
+
+                    </form>
+
+
             </div>
 
-
-            <div id="option_block_2">
-                <label for="reason">If not vaccinated, Reason:</label>
-                <input type="text" id="reason" placeholder="Why?"><br><br>
-            </div>
-
-
-
-            <div class="sub_butt">
-                <button type="submit" id="login_submit" form="login_info" value="Submit">Submit</button>
-            </div>
-                    
-        
-        </form>
-        
-        
-            </div>
-        
         </div>
 
 
-       
+
 
         <footer>
             <div class="content">
@@ -262,8 +262,8 @@
         </footer>
     </section>
 
-    <script type="text/javascript" src="inputform.js"></script>    
-<script type="text/javascript" src="signup.js"></script>
+    <script type="text/javascript" src="inputform.js"></script>
+    <script type="text/javascript" src="signup.js"></script>
     <script type="text/javascript" src="navigation.js"></script>
     <script type="text/javascript" src="dashboard.js"></script>
 </body>

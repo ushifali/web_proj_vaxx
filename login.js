@@ -16,7 +16,6 @@ async function validateUsername(value) {
     if (value.match(/^4nm\d{2}\w{2}\d{3}$/))
         alert("yes a valid username");
     else {
-        alert("not allowed");
         username_alert.style.display = "block";
         // give a sleep interval
 
