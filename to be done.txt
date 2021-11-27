@@ -1,0 +1,29 @@
+frontend
+
+    -> hello guest/user
+
+    ->> put login button on the top heading if u r not logged in
+    if logged in it should change to logout and on click it should close the session all pages
+    (by using sessionstart and session close)
+
+    ->>change the links of footer in all the pages the insta linkedln etd
+
+    ->> try making header sticky( its not for some reason)
+
+    ->> insert quiz in home page
+
+    -> image carasoul(bootstrap maybe download)
+
+    ->> on submission on form fill bootstrap alert green to say sucessful insesrtions
+        else a red alert stating the error is
+    
+backend
+    ->login table separate
+
+    ->contact us footer make it send mail to us and one sending the user thanking for suggestions or whatever
+
+    -> the vacc next part of table left to implement
+
+    ->  use jquery for chart.js to get vales from backend? or use json file but where store? or in cookies?
+         maybe sesison variables
+    
