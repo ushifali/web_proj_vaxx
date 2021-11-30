@@ -132,3 +132,14 @@ input[type="password"] {
     transform: scale(1.1);
     color: var(--dark-theme);
 }
+
+#login_info #email_error,
+#login_info #pass1_error,
+#login_info #pass2_error{
+    width: 350px;
+    font-size: 15px;
+    color: red;
+    text-align: center;
+    padding:5px;
+    display: none;
+}
