@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,6 +125,21 @@
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Sign Up</span>
+            <span id="welcome_txt"> Welcome,
+                <?php
+                // echo $_SESSION['usn'];
+                // Start the session
+                if (isset($_SESSION['usn'])) {
+
+                    $welcome_name = $_SESSION['usn'];
+                    echo  "$welcome_name";
+                } else {
+                    echo "Guest User";
+                }
+
+
+                ?>
+            </span>
         </div>
 
         <div id="login_content">

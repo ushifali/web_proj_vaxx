@@ -425,3 +425,12 @@
     opacity: 1;
     visibility: visible;
 }
+
+#welcome_txt {
+    position: absolute;
+    right: 0;
+    font-size: 1.3em;
+    padding-right: 10px;
+    font-weight: bolder;
+
+}

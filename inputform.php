@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,8 +17,7 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="inputform.css">
-    <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- linking jquery by cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -119,6 +123,21 @@
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Form</span>
+            <span id="welcome_txt"> Welcome,
+                <?php
+                // echo $_SESSION['usn'];
+                // Start the session
+                if (isset($_SESSION['usn'])) {
+
+                    $welcome_name = $_SESSION['usn'];
+                    echo  "$welcome_name";
+                } else {
+                    echo "Guest User";
+                }
+
+
+                ?>
+            </span>
         </div>
 
         <div id="login_content">

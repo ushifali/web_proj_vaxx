@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +24,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    
+
 
 
 
@@ -121,6 +126,21 @@
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Homepage</span>
+            <span id="welcome_txt"> Welcome,
+                <?php
+                // echo $_SESSION['usn'];
+                // Start the session
+                if (isset($_SESSION['usn'])) {
+
+                    $welcome_name = $_SESSION['usn'];
+                    echo  "$welcome_name";
+                } else {
+                    echo "Guest User";
+                }
+
+
+                ?>
+            </span>
         </div>
 
 
@@ -193,14 +213,14 @@
 
             <div id="precaution_content">
                 <h1>Symptoms of Covid</h1>
-                <div id="arrange_precaution_content">                   
-            
+                <div id="arrange_precaution_content">
+
                     <ul data-aos="zoom-in">
                         It has been found that Covid 19 is a close relative of SARS. SARS is a novel type of virus that was reported in 2007,
                         and like most SARS viruses, Covid 19 affects the respiratory tract in humans. The infection starts off with mild
                         flu-like symptoms or no symptoms, and further progress to severe symptoms.
                         <br><br>
-                        
+
                         Covid 19 primarily infects the lungs in the affected individuals and in severe cases causes’ death due to ARDS and
                         pneumonia.
                         <li>
@@ -219,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
 
 
@@ -280,7 +300,7 @@
 
 
 
-  
+
     <script type="text/javascript" src="navigation.js"></script>
     <script type="text/javascript" src="dashboard.js"></script>
     <script type="text/javascript" src="homepage.js"></script>
@@ -289,7 +309,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration:1000
+            duration: 1000
         });
     </script>
 

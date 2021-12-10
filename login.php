@@ -1,6 +1,7 @@
 <?php
 // Start the session
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@ session_start();
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="colors.css">
     <link rel="stylesheet" href="login.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- linking jquery by cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -76,16 +77,16 @@ session_start();
                 </ul>
             </li>
 
-                        </li>
-                        <li>
-                            <a href="inputform.php">
-                                <i class="far fa-sticky-note"></i>
-                                <span class="link_name">Fill Data </span>
-                            </a>
-                            <ul class="sub-menu blank">
-                                <li><a class="link_name" href="inputform.php">Fill Data</a></li>
-                            </ul>
-                        </li>
+            </li>
+            <li>
+                <a href="inputform.php">
+                    <i class="far fa-sticky-note"></i>
+                    <span class="link_name">Fill Data </span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="inputform.php">Fill Data</a></li>
+                </ul>
+            </li>
 
 
 
@@ -124,6 +125,23 @@ session_start();
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Sign Up</span>
+
+            <span id="welcome_txt"> Welcome,
+                 <?php
+                        // echo $_SESSION['usn'];
+                        // Start the session
+                        if (isset($_SESSION['usn'])) {
+
+                            $welcome_name = $_SESSION['usn'];
+                            echo  "$welcome_name";
+                        
+                        } else {
+                            echo "Guest User";
+                        }
+
+
+                        ?> 
+            </span>
             <!-- <button>Register</button> -->
         </div>
 
@@ -143,6 +161,7 @@ session_start();
 
                 <form id="login_info" method="POST" action="login_p.php">
 
+
                     <h1>Log In</h1><br>
 
                     <p>Welcome to Vaxx <br></p>
@@ -150,10 +169,9 @@ session_start();
                     <div id="inputsection">
 
                         <label for="lusername">Username:</label>
-                        <input type="text" id="username" required autocomplete="on" name="username"
-                            onkeyup="validateUsername(value)"><br>
+                        <input type="text" id="username" required autocomplete="on" name="username" onkeyup="validateUsername(value)"><br>
                         <span id="login_username_warning">Username should be your USN</span>
-                        
+
                         <label for="lpassword">Password:</label>
                         <input type="password" id="password" name="password" required autocomplete="on">
 
@@ -166,7 +184,7 @@ session_start();
 
                 </form>
 
-                
+
 
 
             </div>

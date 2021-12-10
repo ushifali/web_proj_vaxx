@@ -1,11 +1,14 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="navigation.css">
@@ -19,7 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- link to aos git library -->
-    
+
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +46,7 @@
 
         <ul class="nav-links">
 
-            <li >
+            <li>
                 <a href="dashboard.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
@@ -120,19 +123,35 @@
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Classroom Dashboard</span>
+
+            <span id="welcome_txt"> Welcome,
+                <?php
+                // echo $_SESSION['usn'];
+                // Start the session
+                if (isset($_SESSION['usn'])) {
+
+                    $welcome_name = $_SESSION['usn'];
+                    echo  "$welcome_name";
+                } else {
+                    echo "Guest User";
+                }
+
+
+                ?>
+            </span>
         </div>
 
         <div class="main_content">
             <div id="main_content_text">
                 Here you can check the vaccination status of students based on year and semester.
                 <br>
-                Check it out ! 
+                Check it out !
             </div>
 
             <form action="" id="classroom_submit">
                 <div>
                     <label for="branch">Branch:</label>
-            
+
                     <select id="branch">
                         <option value="none" selected disabled none>Select a branch</option>
                         <option value="CSE">Computer Science and Engineering</option>
@@ -142,7 +161,7 @@
                         <option value="BT">Biotechnology Engineering</option>
                     </select>
                 </div>
-            
+
                 <div>
                     <label for="year">Year:</label>
                     <select id="year">
@@ -173,16 +192,16 @@
                     </div>
 
                 </div>
-                
+
 
             </div>
 
             <div id="main_content_text">The vaccination status of every student is as below:
             </div>
-            
+
             <div class="container table-responsive py-5" data-aos="zoom-out">
                 <table class="table table-bordered table-hover table-striped">
-                    <thead class="thead-dark" >
+                    <thead class="thead-dark">
                         <tr>
                             <th scope="col">USN</th>
                             <th scope="col">NAME</th>
@@ -190,43 +209,43 @@
                         </tr>
                     </thead>
 
-                    <tbody >
+                    <tbody>
                         <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
                             <td>NO</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Jacob</td>
                             <td>YES</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>Larry</td>
                             <td>NO</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>Larry</td>
                             <td>YES</td>
-                            
+
                         </tr>
                         <tr>
                             <th scope="row">5</th>
                             <td>Larry</td>
                             <td>NO</td>
-                            
+
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            
-          
+
+
         </div>
 
         <footer>
@@ -239,7 +258,7 @@
                     <div class="lower">
                         <div class="topic">Contact us</div>
                         <div class="phone">
-        
+
                             <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
                         </div>
                         <div class="email">
@@ -247,7 +266,7 @@
                         </div>
                         <br>
                         <div class="phone">
-        
+
                             <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
                         </div>
                         <div class="email">
@@ -255,7 +274,7 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="right box">
                     <div class="topic">Subscribe to us</div>
                     <form action="#">
@@ -277,7 +296,7 @@
                 <p>Copyright © 2020 <a href="#">VaXx</a> All rights reserved</p>
             </div>
         </footer>
-        
+
     </section>
 
 

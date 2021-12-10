@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -110,6 +115,21 @@
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
             <span class="text">Contact Us</span>
+            <span id="welcome_txt"> Welcome,
+                <?php
+                // echo $_SESSION['usn'];
+                // Start the session
+                if (isset($_SESSION['usn'])) {
+
+                    $welcome_name = $_SESSION['usn'];
+                    echo  "$welcome_name";
+                } else {
+                    echo "Guest User";
+                }
+
+
+                ?>
+            </span>
         </div>
 
 
@@ -118,19 +138,15 @@
                 <div class="content">
                     <div class="left-side">
                         <div class="details">
-                            <a href="http://www.instagram.com/u_shifali"><i
-                                    class="fab fa-instagram contact_us_icon"></i></a>
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>
                             <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>
-                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i
-                                    class="fab fa-linkedin contact_us_icon"></i></a>
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>
                             <div class="topic">Shifali U</div>
                             <div class="text-one">+91 80958 13777</div>
                         </div>
                         <div class="details">
-                            <a href="http://www.instagram.com/shivani_.karkera"><i
-                                    class="fab fa-instagram contact_us_icon"></i></a>
-                            <a href="https://github.com/shivanikarkera"><i
-                                    class="fab fa-github contact_us_icon"></i></a>
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>
                             <a href=""><i class="fab fa-linkedin contact_us_icon"></i></a>
                             <div class="topic">Shivani Girish Karkera</div>
                             <div class="text-one">+91 94810 17173</div>

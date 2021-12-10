@@ -1,5 +1,7 @@
 <?php
 
+ session_start();
+ 
     $username = $_POST['username'];
     $password = $_POST['password'];
 
@@ -20,8 +22,7 @@ $query_result = mysqli_fetch_array($query);
 
     if($query_result['upassword']  == $password)
     {
-        echo "login successfully";
-        
+        $_SESSION['usn'] = $username;       
     }
     else {
         echo "Login failed. Please try again: Error: ";
