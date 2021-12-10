@@ -11,14 +11,20 @@
 
     //to check if the username already exists in the database
 
-    $username_existance_query = "SELECT username from login where username = '".$username."';";
+    $username_existance_query = "SELECT upassword from login where username = '".$username."';";
     $query = mysqli_query($con, $username_existance_query);
 
-    if(mysqli_num_rows($query) != 0)
+$query_result = mysqli_fetch_array($query);
+
+    // echo "$query_result[upassword] ";
+
+    if($query_result['upassword']  == $password)
     {
-        die ("Username already exists");
+        echo "login successfully";
         
+    }
+    else {
+        echo "Login failed. Please try again: Error: ";
     }
 
     mysqli_close($con);
-?>
