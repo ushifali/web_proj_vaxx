@@ -34,7 +34,7 @@
 
     <nav class="sidebar close">
         <div class="logo-details">
-            <a href="homepage.html"><i class="fas fa-solid fa-virus"></i></a>
+            <a href="homepage.php"><i class="fas fa-solid fa-virus"></i></a>
             <span class="logo_name" id="logo">VaXx</span>
             <i class='bx bx-menu' id="nav_btn"></i>
         </div>
@@ -44,28 +44,28 @@
         <ul class="nav-links">
 
             <li >
-                <a href="dashboard.html">
+                <a href="dashboard.php">
                     <i class='bx bx-grid-alt'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
+                    <li><a class="link_name" href="dashboard.php">Dashboard</a></li>
                 </ul>
             </li>
 
 
             <li>
-                <a href="homepage.html">
+                <a href="homepage.php">
                     <i class="fas fa-user"></i>
                     <span class="link_name">Homepage</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="Homepage.html">Homepage</a></li>
+                    <li><a class="link_name" href="Homepage.php">Homepage</a></li>
                 </ul>
             </li>
 
             <li id="active">
-                <a href="classroom.html">
+                <a href="classroom.php">
                     <i class="fas fa-chalkboard"></i>
                     <span class="link_name">Classroom</span>
                 </a>
@@ -77,22 +77,22 @@
 
 
             <li>
-                <a href="signup.html">
+                <a href="signup.php">
                     <i class="fas fa-sign-in-alt"></i>
                     <span class="link_name">Sign Up</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="signup.html">Sign Up</a></li>
+                    <li><a class="link_name" href="signup.php">Sign Up</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="inputform.html">
+                <a href="inputform.php">
                     <i class="far fa-sticky-note"></i>
                     <span class="link_name">Fill Data </span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="inputform.html">Fill Data</a></li>
+                    <li><a class="link_name" href="inputform.php">Fill Data</a></li>
                 </ul>
             </li>
 
@@ -100,12 +100,12 @@
 
 
             <li>
-                <a href="contact.html">
+                <a href="contact.php">
                     <i class="fas fa-address-book"></i>
                     <span class="link_name">Contact Us</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="contact.html">Contact Us</a></li>
+                    <li><a class="link_name" href="contact.php">Contact Us</a></li>
                 </ul>
             </li>
 

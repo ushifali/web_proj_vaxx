@@ -6,6 +6,8 @@
 <body>
 
 <?php
+//i used both object and procedural functions
+// pls change if its not efficient/ confusing
 
 $servername = "localhost";
 $username = "root";
@@ -21,6 +23,8 @@ $email = $_POST['email'];
 $branch = $_POST['branch'];
 $year = $_POST['years'];
 $vacc_status = $_POST['vacc'];
+$test_taken = $_POST['test'];
+$test_status = $_POST['stest'];
 
 
 // Check connection
@@ -29,8 +33,8 @@ if (!$conn) {
 }
 echo "Connected successfully";
 
-$sql= "INSERT INTO user_data (usn, uname, email, branch, uyear, vacc_status) 
-VALUES ('$username', '$uname', '$email', '$branch', '$year','$vacc_status');";
+$sql= "INSERT INTO user_data 
+VALUES ('$username', '$uname', '$email', '$branch', '$year','$vacc_status','$test_taken', '$test_status');";
 
 if (mysqli_query($conn, $sql)) {
     echo "successfully inserted";

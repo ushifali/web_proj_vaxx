@@ -30,7 +30,7 @@
 
     <nav class="sidebar close">
         <div class="logo-details">
-            <a href="homepage.html"><i class="fas fa-solid fa-virus"></i></a>
+            <a href="homepage.php"><i class="fas fa-solid fa-virus"></i></a>
             <span class="logo_name" id="logo">VaXx</span>
             <i class='bx bx-menu' id="nav_btn"></i>
         </div>
@@ -40,28 +40,28 @@
         <ul class="nav-links">
 
             <li ">
-                <a href=" dashboard.html">
+                <a href=" dashboard.php">
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="dashboard.html">Dashboard</a></li>
+                    <li><a class="link_name" href="dashboard.php">Dashboard</a></li>
                 </ul>
             </li>
 
 
             <li>
-                <a href="homepage.html">
+                <a href="homepage.php">
                     <i class="fas fa-user"></i>
                     <span class="link_name">Homepage</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="Homepage.html">Homepage</a></li>
+                    <li><a class="link_name" href="Homepage.php">Homepage</a></li>
                 </ul>
             </li>
 
             <li>
-                <a href="classroom.html">
+                <a href="classroom.php">
                     <i class="fas fa-chalkboard"></i>
                     <span class="link_name">Classroom</span>
                 </a>
@@ -75,23 +75,23 @@
 
 
             <li id="active">
-                <a href="signup.html">
+                <a href="signup.php">
                     <i class="fas fa-sign-in-alt"></i>
                     <span class="link_name">Sign Up</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="signup.html">Sign Up</a></li>
+                    <li><a class="link_name" href="signup.php">Sign Up</a></li>
                 </ul>
             </li>
 
             </li>
             <li>
-                <a href="inputform.html">
+                <a href="inputform.php">
                     <i class="far fa-sticky-note"></i>
                     <span class="link_name">Fill Data </span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="inputform.html">Fill Data</a></li>
+                    <li><a class="link_name" href="inputform.php">Fill Data</a></li>
                 </ul>
             </li>
 
@@ -99,12 +99,12 @@
 
 
             <li>
-                <a href="contact.html">
+                <a href="contact.php">
                     <i class="fas fa-address-book"></i>
                     <span class="link_name">Contact Us</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="contact.html">Contact Us</a></li>
+                    <li><a class="link_name" href="contact.php">Contact Us</a></li>
                 </ul>
             </li>
 
@@ -125,7 +125,7 @@
         <div id="login_content">
 
             <!-- image as a link. on clicking image it will lead to the link in the tag -->
-            <!-- <a href="dashboard.html"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
+            <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
 
 
             <div id="login_page">
@@ -158,7 +158,7 @@
 
                         <br>
                         <button id="login_submit" type="submit">Sign In</button><br>
-                        <a href="login.html" id="new_user"> Already have an account? Log in</a>
+                        <a href="login.php" id="new_user"> Already have an account? Log in</a>
                     </div>
 
                 </form>
