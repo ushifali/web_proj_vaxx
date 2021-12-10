@@ -434,3 +434,25 @@
     font-weight: bolder;
 
 }
+
+#welcome_txt button {
+    box-shadow: 2px 2px 3px 0px rgb(75 75 75 / 58%);
+    height: 40px;
+    width: 150px;
+    border: none;
+    letter-spacing:1px;
+
+    /* 
+    font-family: "Yomogi", cursive; */
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+
+    transition: 0.3s;
+    background-color: var(--dark-theme);
+    cursor: pointer;
+}
+
+#welcome_txt button:hover {
+    transform: scale(1.05);
+}

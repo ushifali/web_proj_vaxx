@@ -122,9 +122,11 @@ session_start();
                 if (isset($_SESSION['usn'])) {
 
                     $welcome_name = $_SESSION['usn'];
-                    echo  "$welcome_name";
+                    echo  "$welcome_name &nbsp;";
+                    echo "<button>LOG OUT</button>";
                 } else {
-                    echo "Guest User";
+                    echo "Guest User &nbsp";
+                    echo "<button>LOG IN</button>";
                 }
 
 

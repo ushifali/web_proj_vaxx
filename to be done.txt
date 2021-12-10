@@ -1,6 +1,5 @@
 frontend
 
-    -> hello guest/user
 
     ->> put login button on the top heading if u r not logged in
     if logged in it should change to logout and on click it should close the session all pages
