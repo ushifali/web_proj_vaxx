@@ -1,7 +1,7 @@
-//just a sleep function
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+// //just a sleep function
+// function sleep(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+// }
 
 // sleep function breaks the whole linking check into it
 // update: use only async functions can use sleep
@@ -14,14 +14,13 @@ var username_alert = document.getElementById('login_username_warning');
 async function validateUsername(value) {
     // ^$ for the exact matching
     if (value.match(/^4nm\d{2}\w{2}\d{3}$/))
-        alert("yes a valid username");
-    else {
+    {
+        // username_alert.style.value = "USN is valid"
+        username_alert.style.display = "block";
+
+    }else {
         username_alert.style.display = "block";
         // give a sleep interval
-
-        await sleep(500);
-        username_value.value = "";
-        username_alert.style.display = "none";
 
     }
 }

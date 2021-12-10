@@ -11,13 +11,13 @@ pass1.addEventListener('textInput', pass1_verify);
 pass2.addEventListener('textInput', pass2_verify);
 
 
-/*function validate_uname(value)
-{
-    if (value.match(/^4nm\d{2}\w{2}\d{3}$/))
-        alert("yes a valid username");
-    else {
-        username_alert.style.display = "block";
-}*/
+// function validate_uname(value)
+// {
+//     if (value.match(/^4nm\d{2}\w{2}\d{3}$/))
+//         alert("yes a valid username");
+//     else {
+//         username_alert.style.display = "block";
+// }
 
 function validated()
 {
