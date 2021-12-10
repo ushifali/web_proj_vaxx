@@ -127,22 +127,21 @@ session_start();
             <span class="text">Sign Up</span>
 
             <span id="welcome_txt"> Welcome,
-                 <?php
-                        // echo $_SESSION['usn'];
-                        // Start the session
-                        if (isset($_SESSION['usn'])) {
+                <?php
+                // echo $_SESSION['usn'];
+                // Start the session
+                if (isset($_SESSION['usn'])) {
 
-                            $welcome_name = $_SESSION['usn'];
-                            echo  "$welcome_name &nbsp;";
-                        echo "<button>LOG OUT</button>";
-                        
-                        } else {
-                        echo "Guest User &nbsp";
-                        echo "<button>LOG IN</button>";
-                        }
+                    $welcome_name = $_SESSION['usn'];
+                    echo  "$welcome_name &nbsp; &nbsp;";
+                    echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
+                } else {
+                    echo "Guest User &nbsp";
+                    echo "
+                    <button><a href=\"login.php\">LOG IN</a></button>";
+                } ?>
 
 
-                        ?> 
             </span>
             <!-- <button>Register</button> -->
         </div>

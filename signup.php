@@ -132,17 +132,17 @@ session_start();
                 if (isset($_SESSION['usn'])) {
 
                     $welcome_name = $_SESSION['usn'];
-                    echo  "$welcome_name &nbsp;";
-                    echo "<button>LOG OUT</button>";
+                    echo  "$welcome_name &nbsp; &nbsp;";
+                    echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
                 } else {
                     echo "Guest User &nbsp";
                     echo "
-                    <button><a href=\"logout.php\">LOG IN</a></button>";
+                    <button><a href=\"login.php\">LOG IN</a></button>";
                 } ?>
             </span>
         </div>
 
-        <div id=" login_content">
+        <div id="login_content">
 
             <!-- image as a link. on clicking image it will lead to the link in the tag -->
             <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->

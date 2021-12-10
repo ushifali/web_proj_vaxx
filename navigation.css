@@ -440,7 +440,7 @@
     height: 40px;
     width: 150px;
     border: none;
-    letter-spacing:1px;
+    letter-spacing: 1px;
 
     /* 
     font-family: "Yomogi", cursive; */
@@ -455,4 +455,9 @@
 
 #welcome_txt button:hover {
     transform: scale(1.05);
+}
+
+footer .content p,
+a {
+    text-decoration: none;
 }

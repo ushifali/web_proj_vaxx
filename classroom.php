@@ -131,15 +131,13 @@ session_start();
                 if (isset($_SESSION['usn'])) {
 
                     $welcome_name = $_SESSION['usn'];
-                    echo  "$welcome_name &nbsp;";
-                    echo "<button>LOG OUT</button>";
+                    echo  "$welcome_name &nbsp; &nbsp;";
+                    echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
                 } else {
                     echo "Guest User &nbsp";
-                    echo "<button>LOG IN</button>";
-                }
-
-
-                ?>
+                    echo "
+                    <button><a href=\"login.php\">LOG IN</a></button>";
+                } ?>
             </span>
         </div>
 
