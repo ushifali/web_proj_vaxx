@@ -32,3 +32,17 @@ option_3.style.display = "block";
  vaccine_not_taken_2.onclick = function () {
 option_3.style.display = "none";
 }
+
+var stest_block= document.querySelector("#test_block_if_yes");
+stest_block.style.display = "none";
+
+
+var test_yes = document.querySelector("#test_yes");
+var test_no = document.querySelector("#test_no");
+
+test_yes.onclick = function() {
+    stest_block.style.display = "block";
+}
+test_no.onclick = function() {
+    stest_block.style.display = "none";
+}
