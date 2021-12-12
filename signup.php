@@ -21,6 +21,11 @@ session_start();
     <!-- linking jquery by cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+
+    <!-- If you're using FontAwesome 4.7 : -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
     <script src="jquery-3.5.1.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -173,6 +178,8 @@ session_start();
                         <input type="password" name="password2" required onchange="validated()">
 
                         <div id="pass2_error">Password not matching
+                        </div>
+                        <div id="pass2_verified">Password matches
                         </div>
 
                         <br>
