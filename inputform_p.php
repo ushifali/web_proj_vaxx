@@ -43,6 +43,19 @@ else{
     echo "Error insert: " . mysqli_error($conn);
 }
 
+$vacc_type = $_POST['vacc_type'];
+$fdate = $_POST['fdate'];
+$second_status = $_POST['vacc_2'];
+$sdate = $_POST['sdate'];
+
+
+$sql = "INSERT INTO user_vaxx_details values('$username','$vacc_type','$fdate','$second_status','$sdate');";
+if (mysqli_query($conn, $sql)) {
+    echo "successfully inserted";
+} else {
+    echo "Error insert: " . mysqli_error($conn);
+}
+
 $conn->close();
 
 

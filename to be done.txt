@@ -1,10 +1,5 @@
 frontend
 
-
-    ->> put login button on the top heading if u r not logged in
-    if logged in it should change to logout and on click it should close the session all pages
-    (by using sessionstart and session close)
-
     ->>change the links of footer in all the pages the insta linkedln etd
 
     ->> try making header sticky( its not for some reason)

@@ -435,7 +435,8 @@
 
 }
 
-#welcome_txt button {
+#welcome_txt button,
+#login_butn {
     box-shadow: 2px 2px 3px 0px rgb(75 75 75 / 58%);
     height: 40px;
     width: 150px;

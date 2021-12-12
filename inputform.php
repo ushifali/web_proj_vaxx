@@ -118,191 +118,201 @@ session_start();
     </nav>
 
     <a id="button"></a>
-
-    <section class="home-section">
-        <div class="home-content">
-            <i class='bx bx-menu' id="nav_bar1"></i>
-            <span class="text">Form</span>
-            <span id="welcome_txt"> Welcome,
-                <?php
-                // echo $_SESSION['usn'];
-                // Start the session
-                if (isset($_SESSION['usn'])) {
-
+    <?php
+    if (isset($_SESSION['usn'])) {
+    ?>
+        <section class="home-section">
+            <div class="home-content">
+                <i class='bx bx-menu' id="nav_bar1"></i>
+                <span class="text">Form</span>
+                <span id="welcome_txt"> Welcome,
+                    <?php
+                    // echo $_SESSION['usn'];
+                    // Start the session
                     $welcome_name = $_SESSION['usn'];
                     echo  "$welcome_name &nbsp; &nbsp;";
                     echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
-                } else {
-                    echo "Guest User &nbsp";
-                    echo "
-                    <button><a href=\"login.php\">LOG IN</a></button>";
-                } ?>
+
+                    ?>
 
 
-            </span>
-        </div>
+                </span>
+            </div>
 
-        <div id="login_content">
+            <div id="login_content">
 
-            <!-- image as a link. on clicking image it will lead to the link in the tag -->
-            <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
-
-
-            <div id="login_page">
+                <!-- image as a link. on clicking image it will lead to the link in the tag -->
+                <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
 
 
-                <form id="login_info" method="POST" action="inputform_p.php">
+                <div id="login_page">
 
-                    <h1>Fill the form</h1>
 
-                    <form id="inputsection">
+                    <form id="login_info" method="POST" action="inputform_p.php">
 
-                        <label for="username">USN:</label>
-                        <input type="text" id="username" name="username" required autocomplete="on"><br><br>
+                        <h1>Fill the form</h1>
 
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="uname" required autocomplete="on"><br><br>
+                        <form id="inputsection">
 
-                        <label for="email">Email-id:</label>
-                        <input type="email" id="name" name="email" required autocomplete="on"><br><br>
+                            <label for="username">USN:</label>
+                            <input type="text" id="username" name="username" required autocomplete="on"><br><br>
 
-                        <label for="branch">Branch:</label><br>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="uname" required autocomplete="on"><br><br>
 
-                        <select id="branch" name="branch" required>
-                            <option value="none" selected disabled none>Select a branch</option>
-                            <option value="CSE">Computer Science and Engineering</option>
-                            <option value="ISE">Information Science and Engineering</option>
-                            <option value="ECE">Electronics and Communications Engineering</option>
-                            <option value="EEE">Electrical and Electronics Engineering</option>
-                            <option value="BT">Biotechnology Engineering</option>
-                        </select>
-                        <br><br>
+                            <label for="email">Email-id:</label>
+                            <input type="email" id="name" name="email" required autocomplete="on"><br><br>
 
-                        <label for="year">Year:</label><br>
+                            <label for="branch">Branch:</label><br>
 
-                        <select id="year" name="years">
-                            <option value="none" selected disabled none>Select a year</option>
-                            <option value="1">1st Year</option>
-                            <option value="2">2nd Year</option>
-                            <option value="3">3rd Year</option>
-                            <option value="4">4th Year</option>
-                        </select>
-                        <br><br>
+                            <select id="branch" name="branch" required>
+                                <option value="none" selected disabled none>Select a branch</option>
+                                <option value="CSE">Computer Science and Engineering</option>
+                                <option value="ISE">Information Science and Engineering</option>
+                                <option value="ECE">Electronics and Communications Engineering</option>
+                                <option value="EEE">Electrical and Electronics Engineering</option>
+                                <option value="BT">Biotechnology Engineering</option>
+                            </select>
+                            <br><br>
 
-                        <label for="vacc" name="vacc">Have you been vaccinated?</label>
-                        <input id="vacc_yes" type="radio" name="vacc" value="yes">Yes
-                        <input id="vacc_no" type="radio" name="vacc" value="no">No
+                            <label for="year">Year:</label><br>
+
+                            <select id="year" name="years">
+                                <option value="none" selected disabled none>Select a year</option>
+                                <option value="1">1st Year</option>
+                                <option value="2">2nd Year</option>
+                                <option value="3">3rd Year</option>
+                                <option value="4">4th Year</option>
+                            </select>
+                            <br><br>
+
+                            <label for="vacc" name="vacc">Have you been vaccinated?</label>
+                            <input id="vacc_yes" type="radio" name="vacc" value="yes">Yes
+                            <input id="vacc_no" type="radio" name="vacc" value="no">No
 
 
 
-                        <div id="option_block_1">
-                            <label for="vaccination">You are vaccinated with?</label><br>
+                            <div id="option_block_1">
+                                <label for="vaccination">You are vaccinated with?</label><br>
 
-                            <select id="vaccination">
-                                <option value="none" selected disabled none>Select a vaccination</option>
-                                <option value="1">Covishield</option>
-                                <option value="2">Covaxin</option>
-                                <option value="3">Sputnik</option>
-                            </select><br><br>
+                                <select id="vaccination" name="vacc_type">
+                                    <option value="none" selected disabled none>Select a vaccination</option>
+                                    <option value="Covishield">Covishield</option>
+                                    <option value="Covaxin">Covaxin</option>
+                                    <option value="Sputnik">Sputnik</option>
+                                </select><br><br>
 
-                            <label for="dose1">When was your first dose?</label>
-                            <input type="date" id="dose1" placeholder="1st Dose"><br><br>
+                                <label for="dose1">When was your first dose?</label>
+                                <input type="date" id="dose1" name="fdate" placeholder="1st Dose"><br><br>
 
-                            <label for="vacc_2" name="vacc_2">Have you taken second dose?</label>
-                            <input id="vacc_2_yes" type="radio" name="vacc_2" value="yes">Yes
-                            <input id="vacc_2_no" type="radio" name="vacc_2" value="no">No
+                                <label for="vacc_2" name="vacc_2">Have you taken second dose?</label>
+                                <input id="vacc_2_yes" type="radio" name="vacc_2" value="yes">Yes
+                                <input id="vacc_2_no" type="radio" name="vacc_2" value="no">No
 
-                            <div id="option_block_3">
-                                <label for="dose2">When was your second dose?</label>
-                                <input type="date" id="dose1" placeholder="2nd Dose"><br><br>
+                                <div id="option_block_3">
+                                    <label for="dose2">When was your second dose?</label>
+                                    <input type="date" id="dose1" name="sdate" placeholder="2nd Dose"><br><br>
+                                </div>
+
                             </div>
 
-                        </div>
 
+                            <div id="option_block_2">
+                                <label for="reason">If not vaccinated, Reason:</label>
+                                <input type="text" id="reason" placeholder="Why?"><br><br>
+                            </div>
 
-                        <div id="option_block_2">
-                            <label for="reason">If not vaccinated, Reason:</label>
-                            <input type="text" id="reason" placeholder="Why?"><br><br>
-                        </div>
+                            <div id="test_block">
+                                <label for="test" name="vacc_2">Have you taken a covid test recently?</label>
+                                <input id="test_yes" type="radio" name="test" value="yes">Yes
+                                <input id="test_no" type="radio" name="test" value="no">No
+                            </div>
 
-                        <div id="test_block">
-                            <label for="test" name="vacc_2">Have you taken a covid test recently?</label>
-                            <input id="test_yes" type="radio" name="test" value="yes">Yes
-                            <input id="test_no" type="radio" name="test" value="no">No
-                        </div>
-
-                        <div id="test_block_if_yes">
-                            <label for="stest" name="vacc_2">IF test results are negative select yes-</label>
-                            <input id="stest_yes" type="radio" name="stest" value="yes">Yes
-                            <input id="stest_no" type="radio" name="stest" value="no">No
-                        </div>
-
-
-
-                        <div class="sub_butt">
-                            <button type="submit" id="login_submit" form="login_info" value="Submit">Submit</button>
-                        </div>
-
-
-                    </form>
-
-
-            </div>
-
-        </div>
+                            <div id="test_block_if_yes">
+                                <label for="stest" name="vacc_2">IF test results are negative select yes-</label>
+                                <input id="stest_yes" type="radio" name="stest" value="yes">Yes
+                                <input id="stest_no" type="radio" name="stest" value="no">No
+                            </div>
 
 
 
+                            <div class="sub_butt">
+                                <button type="submit" id="login_submit" form="login_info" value="Submit">Submit</button>
+                            </div>
 
-        <footer>
-            <div class="content">
-                <div class="left box">
-                    <div class="upper">
-                        <div class="topic">About us</div>
-                        <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
-                    </div>
-                    <div class="lower">
-                        <div class="topic">Contact us</div>
-                        <div class="phone">
 
-                            <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
-                        </div>
-                        <div class="email">
-                            <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
-                        </div>
-                        <br>
-                        <div class="phone">
+                        </form>
 
-                            <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
-                        </div>
-                        <div class="email">
-                            <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
-                        </div>
-                    </div>
+
                 </div>
 
-                <div class="right box">
-                    <div class="topic">Subscribe to us</div>
-                    <form action="#">
-                        <input type="text" placeholder="Enter email address">
-                        <input type="submit" name="" value="Send">
-                        <div class="media-icons">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            &nbsp; &nbsp; &nbsp; &nbsp;
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+
+
+
+            <footer>
+                <div class="content">
+                    <div class="left box">
+                        <div class="upper">
+                            <div class="topic">About us</div>
+                            <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
                         </div>
-                    </form>
+                        <div class="lower">
+                            <div class="topic">Contact us</div>
+                            <div class="phone">
+
+                                <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+                            </div>
+                            <div class="email">
+                                <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+                            </div>
+                            <br>
+                            <div class="phone">
+
+                                <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+                            </div>
+                            <div class="email">
+                                <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right box">
+                        <div class="topic">Subscribe to us</div>
+                        <form action="#">
+                            <input type="text" placeholder="Enter email address">
+                            <input type="submit" name="" value="Send">
+                            <div class="media-icons">
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                &nbsp; &nbsp; &nbsp; &nbsp;
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="bottom">
-                <p>Copyright © 2020 <a href="#">VaXx</a> All rights reserved</p>
-            </div>
-        </footer>
-    </section>
+                <div class="bottom">
+                    <p>Copyright © 2020 <a href="#">VaXx</a> All rights reserved</p>
+                </div>
+            </footer>
+        </section>
+    <?php
+
+    } else {
+    ?>
+
+        <section class="home-section" id="center_inside_this">
+            <h2>
+                Please Login to continue.</h2><br>
+            <button id="login_butn"><a href="login.php">LOG IN</a></button>
+        </section>
+
+    <?php
+    } ?>
 
     <script type="text/javascript" src="inputform.js"></script>
     <script type="text/javascript" src="signup.js"></script>
