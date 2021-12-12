@@ -2,7 +2,7 @@ Chart.defaults.global.defaultFontColor = "#fff";
 
 // for pie chart
 var xValues = ["COVISHIELD", "COVAXIN", "SPUTNIK V", "NONE"];
-var yValues = [552, 440, 93,56];
+var yValues = vacc_types;
 var barColors = [
     "#abfc7c",
     "#00aba9",
@@ -32,7 +32,7 @@ new Chart("piechart", {
 
 //for barchartics based on branch
 var xValues = ["CSE", "ECE", "ME", "BT", "ISE","EEE"];
-var yValues = [55, 49, 44, 24, 30,8];
+var yValues = branch_count;
 var barColors = [
     "#7CC6FE",
     "#abfc7c",

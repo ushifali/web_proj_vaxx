@@ -176,6 +176,7 @@ session_start();
                                     <option value="ECE">Electronics and Communications Engineering</option>
                                     <option value="EEE">Electrical and Electronics Engineering</option>
                                     <option value="BT">Biotechnology Engineering</option>
+                                    <option value="ME">Mechanical Engineering</option>
                                 </select>
                                 <br><br>
 

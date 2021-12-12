@@ -1,7 +1,7 @@
 <?php
 
 include 'dashboard_p.php';
-
+include 'graph_data.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -257,6 +257,11 @@ include 'dashboard_p.php';
 
 
   <script type="text/javascript" src="navigation.js"></script>
+  <script type="text/javascript">
+    var vacc_types = [<?php echo $covishield_count?>,<?php echo $Covaxin_count?>, <?php echo $Sputnik_count?>,0];
+    var branch_count = [<?php echo $CSE_count?>,<?php echo $ECE_count?>, <?php echo $ME_count?>, 
+    <?php echo$BT_count?>,<?php echo $ISE_count?>, <?php echo $EEE_count?>]
+  </script>
   <script type="text/javascript" src="dashboard.js"></script>
   <!-- js for aos library -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
