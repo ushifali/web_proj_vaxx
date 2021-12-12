@@ -151,7 +151,7 @@ session_start();
             <div id="login_page">
 
 
-                <form id="login_info" method="POST" action="signup_p.php" onsubmit="return validated()">
+                <form id="login_info" method="POST" action="signup_p.php">
 
                     <h1>Sign Up</h1><br>
 
@@ -160,21 +160,20 @@ session_start();
                     <div id="inputsection">
 
                         <label for="username">Username:</label>
-                        <input type="text" name="username" required autocomplete="on" onchange="return validate_uname(value)"><br>
+                        <input type="text" name="username" required autocomplete="on" onchange="validate_uname(value)"><br>
 
-                        <div id="email_error">Username must be your USN</div>
+                        <div id="usn_error">Username must be your USN</div>
 
 
                         <label for="password">Password:</label>
                         <input type="password" name="password1" required>
                         <br>
 
-                        <div id="pass1_error">Password must be atleast 6 characters</div>
-
                         <label for="password"> Re-enter Password:</label>
-                        <input type="password" required>
+                        <input type="password" name="password2" required onchange="validated()">
 
-                        <div id="pass2_error">Password not matching</div>
+                        <div id="pass2_error">Password not matching
+                        </div>
 
                         <br>
                         <button id="login_submit" type="submit">Sign In</button><br>
