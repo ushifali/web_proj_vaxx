@@ -209,41 +209,28 @@ include 'graph_data.php';
             <div class="topic">About us</div>
             <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
           </div>
-          <div class="lower">
-            <div class="topic">Contact us</div>
-            <div class="phone">
 
-              <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
-            </div>
-            <div class="email">
-              <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
-            </div>
-            <br>
-            <div class="phone">
-
-              <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
-            </div>
-            <div class="email">
-              <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
-            </div>
-          </div>
         </div>
 
         <div class="right box">
-          <div class="topic">Subscribe to us</div>
-          <form action="#">
-            <input type="text" placeholder="Enter email address">
-            <input type="submit" name="" value="Send">
-            <div class="media-icons">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              &nbsp; &nbsp; &nbsp; &nbsp;
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </form>
+
+          <div class="topic">Contact us</div>
+          <div class="phone">
+
+            <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+          </div>
+          <br>
+          <div class="phone">
+
+            <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+          </div>
+          <div class="email">
+            <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+
+          </div>
         </div>
       </div>
       <div class="bottom">
@@ -258,9 +245,10 @@ include 'graph_data.php';
 
   <script type="text/javascript" src="navigation.js"></script>
   <script type="text/javascript">
-    var vacc_types = [<?php echo $covishield_count?>,<?php echo $Covaxin_count?>, <?php echo $Sputnik_count?>,0];
-    var branch_count = [<?php echo $CSE_count?>,<?php echo $ECE_count?>, <?php echo $ME_count?>, 
-    <?php echo$BT_count?>,<?php echo $ISE_count?>, <?php echo $EEE_count?>]
+    var vacc_types = [<?php echo $covishield_count ?>, <?php echo $Covaxin_count ?>, <?php echo $Sputnik_count ?>, 0];
+    var branch_count = [<?php echo $CSE_count ?>, <?php echo $ECE_count ?>, <?php echo $ME_count ?>,
+      <?php echo $BT_count ?>, <?php echo $ISE_count ?>, <?php echo $EEE_count ?>
+    ]
   </script>
   <script type="text/javascript" src="dashboard.js"></script>
   <!-- js for aos library -->
