@@ -196,53 +196,71 @@ session_start();
 
             </div>
 
-            <div id="main_content_text">The vaccination status of every student is as below:
-            </div>
+            <?php
+            if (isset($_SESSION['usn'])) {
+            ?>
 
-            <div class="container table-responsive py-5" data-aos="zoom-out">
-                <table class="table table-bordered table-hover table-striped">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">USN</th>
-                            <th scope="col">NAME</th>
-                            <th scope="col">STATUS</th>
-                        </tr>
-                    </thead>
+                <div id="main_content_text">The vaccination status of every student is as below:
+                </div>
 
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>NO</td>
+                <div class="container table-responsive py-5" data-aos="zoom-out">
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">USN</th>
+                                <th scope="col">NAME</th>
+                                <th scope="col">STATUS</th>
+                            </tr>
+                        </thead>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>YES</td>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>NO</td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>NO</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>YES</td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Larry</td>
-                            <td>YES</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>NO</td>
 
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Larry</td>
-                            <td>NO</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Larry</td>
+                                <td>YES</td>
 
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Larry</td>
+                                <td>NO</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            <?php
+
+            } else {
+            ?>
+                <section class="home-section" id="center_inside_this">
+                    <h3>
+                        Please Login to view individual status.</h3><br>
+                    <button id="login_butn"><a href="login.php">LOG IN</a></button>
+                </section>
+
+            <?php
+            } ?>
+
 
 
 

@@ -45,3 +45,15 @@ table {
     font-size: 18px !important;
     box-shadow: 3.4px 6.9px 6.9px hsl(0deg 0% 0% / 0.39);
 }
+
+#center_inside_this {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left:108px;
+    
+    flex-direction: column;
+    margin: 30px;
+}
+

@@ -29,4 +29,6 @@ $query_result = mysqli_fetch_array($query);
     }
 
     mysqli_close($con);
-    ?>
+
+header('Location: inputform.php');
+?>
