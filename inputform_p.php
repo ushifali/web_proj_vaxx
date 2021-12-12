@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-
-<head>
-   
-</head>
-<body>
-
 <?php
 //i used both object and procedural functions
 // pls change if its not efficient/ confusing
@@ -31,7 +24,6 @@ $test_status = $_POST['stest'];
 if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
 }
-echo "Connected successfully";
 
 $sql= "INSERT INTO user_data 
 VALUES ('$username', '$uname', '$email', '$branch', '$year','$vacc_status','$test_taken', '$test_status');";
@@ -56,10 +48,6 @@ if (mysqli_query($conn, $sql)) {
     echo "Error insert: " . mysqli_error($conn);
 }
 
-$conn->close();
 
-
+header('Location: dashboard.php');
 ?>
-    
-</body>
-</html>

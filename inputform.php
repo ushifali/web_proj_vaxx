@@ -2,6 +2,7 @@
 // Start the session
 session_start();
 
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -120,6 +121,7 @@ session_start();
     <a id="button"></a>
     <?php
     if (isset($_SESSION['usn'])) {
+        include 'form_filled.php';
     ?>
         <section class="home-section">
             <div class="home-content">
@@ -139,114 +141,121 @@ session_start();
                 </span>
             </div>
 
-            <div id="login_content">
+            <?php if ($form_filled_status == 0) { ?>
 
-                <!-- image as a link. on clicking image it will lead to the link in the tag -->
-                <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
+                <div id="login_content">
 
-
-                <div id="login_page">
-
-
-                    <form id="login_info" method="POST" action="inputform_p.php">
-
-                        <h1>Fill the form</h1>
-
-                        <form id="inputsection">
-
-                            <label for="username">USN:</label>
-                            <input type="text" id="username" name="username" required autocomplete="on"><br><br>
-
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="uname" required autocomplete="on"><br><br>
-
-                            <label for="email">Email-id:</label>
-                            <input type="email" id="name" name="email" required autocomplete="on"><br><br>
-
-                            <label for="branch">Branch:</label><br>
-
-                            <select id="branch" name="branch" required>
-                                <option value="none" selected disabled none>Select a branch</option>
-                                <option value="CSE">Computer Science and Engineering</option>
-                                <option value="ISE">Information Science and Engineering</option>
-                                <option value="ECE">Electronics and Communications Engineering</option>
-                                <option value="EEE">Electrical and Electronics Engineering</option>
-                                <option value="BT">Biotechnology Engineering</option>
-                            </select>
-                            <br><br>
-
-                            <label for="year">Year:</label><br>
-
-                            <select id="year" name="years">
-                                <option value="none" selected disabled none>Select a year</option>
-                                <option value="1">1st Year</option>
-                                <option value="2">2nd Year</option>
-                                <option value="3">3rd Year</option>
-                                <option value="4">4th Year</option>
-                            </select>
-                            <br><br>
-
-                            <label for="vacc" name="vacc">Have you been vaccinated?</label>
-                            <input id="vacc_yes" type="radio" name="vacc" value="yes">Yes
-                            <input id="vacc_no" type="radio" name="vacc" value="no">No
+                    <!-- image as a link. on clicking image it will lead to the link in the tag -->
+                    <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
 
 
+                    <div id="login_page">
 
-                            <div id="option_block_1">
-                                <label for="vaccination">You are vaccinated with?</label><br>
 
-                                <select id="vaccination" name="vacc_type">
-                                    <option value="none" selected disabled none>Select a vaccination</option>
-                                    <option value="Covishield">Covishield</option>
-                                    <option value="Covaxin">Covaxin</option>
-                                    <option value="Sputnik">Sputnik</option>
-                                </select><br><br>
+                        <form id="login_info" method="POST" action="inputform_p.php">
 
-                                <label for="dose1">When was your first dose?</label>
-                                <input type="date" id="dose1" name="fdate" placeholder="1st Dose"><br><br>
+                            <h1>Fill the form</h1>
 
-                                <label for="vacc_2" name="vacc_2">Have you taken second dose?</label>
-                                <input id="vacc_2_yes" type="radio" name="vacc_2" value="yes">Yes
-                                <input id="vacc_2_no" type="radio" name="vacc_2" value="no">No
+                            <form id="inputsection">
 
-                                <div id="option_block_3">
-                                    <label for="dose2">When was your second dose?</label>
-                                    <input type="date" id="dose1" name="sdate" placeholder="2nd Dose"><br><br>
+                                <label for="username">USN:</label>
+                                <input type="text" id="username" name="username" required autocomplete="on"><br><br>
+
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="uname" required autocomplete="on"><br><br>
+
+                                <label for="email">Email-id:</label>
+                                <input type="email" id="name" name="email" required autocomplete="on"><br><br>
+
+                                <label for="branch">Branch:</label><br>
+
+                                <select id="branch" name="branch" required>
+                                    <option value="none" selected disabled none>Select a branch</option>
+                                    <option value="CSE">Computer Science and Engineering</option>
+                                    <option value="ISE">Information Science and Engineering</option>
+                                    <option value="ECE">Electronics and Communications Engineering</option>
+                                    <option value="EEE">Electrical and Electronics Engineering</option>
+                                    <option value="BT">Biotechnology Engineering</option>
+                                </select>
+                                <br><br>
+
+                                <label for="year">Year:</label><br>
+
+                                <select id="year" name="years">
+                                    <option value="none" selected disabled none>Select a year</option>
+                                    <option value="1">1st Year</option>
+                                    <option value="2">2nd Year</option>
+                                    <option value="3">3rd Year</option>
+                                    <option value="4">4th Year</option>
+                                </select>
+                                <br><br>
+
+                                <label for="vacc" name="vacc">Have you been vaccinated?</label>
+                                <input id="vacc_yes" type="radio" name="vacc" value="yes">Yes
+                                <input id="vacc_no" type="radio" name="vacc" value="no">No
+
+
+
+                                <div id="option_block_1">
+                                    <label for="vaccination">You are vaccinated with?</label><br>
+
+                                    <select id="vaccination" name="vacc_type">
+                                        <option value="none" selected disabled none>Select a vaccination</option>
+                                        <option value="Covishield">Covishield</option>
+                                        <option value="Covaxin">Covaxin</option>
+                                        <option value="Sputnik">Sputnik</option>
+                                    </select><br><br>
+
+                                    <label for="dose1">When was your first dose?</label>
+                                    <input type="date" id="dose1" name="fdate" placeholder="1st Dose"><br><br>
+
+                                    <label for="vacc_2" name="vacc_2">Have you taken second dose?</label>
+                                    <input id="vacc_2_yes" type="radio" name="vacc_2" value="yes">Yes
+                                    <input id="vacc_2_no" type="radio" name="vacc_2" value="no">No
+
+                                    <div id="option_block_3">
+                                        <label for="dose2">When was your second dose?</label>
+                                        <input type="date" id="dose1" name="sdate" placeholder="2nd Dose"><br><br>
+                                    </div>
+
                                 </div>
 
-                            </div>
 
+                                <div id="option_block_2">
+                                    <label for="reason">If not vaccinated, Reason:</label>
+                                    <input type="text" id="reason" placeholder="Why?"><br><br>
+                                </div>
 
-                            <div id="option_block_2">
-                                <label for="reason">If not vaccinated, Reason:</label>
-                                <input type="text" id="reason" placeholder="Why?"><br><br>
-                            </div>
+                                <div id="test_block">
+                                    <label for="test" name="vacc_2">Have you taken a covid test recently?</label>
+                                    <input id="test_yes" type="radio" name="test" value="yes">Yes
+                                    <input id="test_no" type="radio" name="test" value="no">No
+                                </div>
 
-                            <div id="test_block">
-                                <label for="test" name="vacc_2">Have you taken a covid test recently?</label>
-                                <input id="test_yes" type="radio" name="test" value="yes">Yes
-                                <input id="test_no" type="radio" name="test" value="no">No
-                            </div>
-
-                            <div id="test_block_if_yes">
-                                <label for="stest" name="vacc_2">IF test results are negative select yes-</label>
-                                <input id="stest_yes" type="radio" name="stest" value="yes">Yes
-                                <input id="stest_no" type="radio" name="stest" value="no">No
-                            </div>
+                                <div id="test_block_if_yes">
+                                    <label for="stest" name="vacc_2">IF test results are negative select yes-</label>
+                                    <input id="stest_yes" type="radio" name="stest" value="yes">Yes
+                                    <input id="stest_no" type="radio" name="stest" value="no">No
+                                </div>
 
 
 
-                            <div class="sub_butt">
-                                <button type="submit" id="login_submit" form="login_info" value="Submit">Submit</button>
-                            </div>
+                                <div class="sub_butt">
+                                    <button type="submit" id="login_submit" form="login_info" value="Submit">Submit</button>
+                                </div>
 
 
-                        </form>
+                            </form>
 
+
+                    </div>
 
                 </div>
-
-            </div>
+            <?php } else { ?>
+                <div id="already_filled">
+                    <h2>You have already filled the form </h2>
+                </div>
+            <?php } ?>
 
 
 

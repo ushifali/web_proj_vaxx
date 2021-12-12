@@ -129,12 +129,19 @@ select {
     border: grey solid 1px;
 }
 
-#center_inside_this
-{
-    display:flex;
+#center_inside_this {
+    display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height: 100vh;
     flex-direction: column;
+}
+
+#already_filled{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 360px);
 }

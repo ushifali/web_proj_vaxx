@@ -1,6 +1,6 @@
 <?php
-// Start the session
-session_start();
+
+include 'dashboard_p.php';
 
 ?>
 <!DOCTYPE html>
@@ -153,22 +153,22 @@ session_start();
       <div id="covid_count_info">
 
         <div id="covid_count1" data-aos="fade-right">
-          <span class="covid_count">340</span>
+          <span class="covid_count"><?php echo "$y"; ?></span>
           <span class="covid_count_content"> Are Fully Vaccinated</span>
         </div>
 
         <div id="covid_count2" data-aos="fade-right">
-          <span class="covid_count">270</span>
+          <span class="covid_count"><?php echo "$z"; ?></span>
           <span class="covid_count_content"> Are Patially Vaccinated</span>
         </div>
 
         <div id="covid_count3" data-aos="fade-left">
-          <span class="covid_count">40</span>
+          <span class="covid_count"><?php echo "$x"; ?></span>
           <span class="covid_count_content"> Are Not Vaccinated !!</span>
         </div>
 
         <div id="covid_count4" data-aos="fade-left">
-          <span class="covid_count">60</span>
+          <span class="covid_count"><?php echo "$a"; ?></span>
           <span class="covid_count_content"> Tested And Negative !!</span>
         </div>
       </div>
