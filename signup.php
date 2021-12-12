@@ -49,8 +49,8 @@ session_start();
 
         <ul class="nav-links">
 
-            <li ">
-                <a href=" dashboard.php">
+            <li>
+                <a href="dashboard.php">
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
                 </a>

@@ -245,7 +245,7 @@ include 'graph_data.php';
 
   <script type="text/javascript" src="navigation.js"></script>
   <script type="text/javascript">
-    var vacc_types = [<?php echo $covishield_count ?>, <?php echo $Covaxin_count ?>, <?php echo $Sputnik_count ?>, 0];
+    var vacc_types = [<?php echo $covishield_count ?>, <?php echo $Covaxin_count ?>, <?php echo $Sputnik_count ?>, <?php echo $novacc_count?>];
     var branch_count = [<?php echo $CSE_count ?>, <?php echo $ECE_count ?>, <?php echo $ME_count ?>,
       <?php echo $BT_count ?>, <?php echo $ISE_count ?>, <?php echo $EEE_count ?>
     ]

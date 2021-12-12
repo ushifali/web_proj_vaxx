@@ -29,6 +29,11 @@ $Sputnik_query_execute = mysqli_query($conn, $Sputnik_query);
 $result_extract = mysqli_fetch_array($Sputnik_query_execute);
 $Sputnik_count = $result_extract['u'];
 
+$novacc_query = "SELECT count(*) as u FROM user_data where vacc_status='no';";
+$novacc_query_execute = mysqli_query($conn, $novacc_query);
+$result_extract = mysqli_fetch_array($novacc_query_execute);
+$novacc_count = $result_extract['u'];
+
 
 $CSE_query = "SELECT count(*) as u FROM user_data where branch='CSE';";
 $CSE_query_execute = mysqli_query($conn, $CSE_query);
