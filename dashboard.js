@@ -66,7 +66,7 @@ new Chart("barchart", {
 
 //for horizontal barchartics based on branch
 var xValues = ["CSE", "ECE", "ME", "BT", "ISE", "EEE"];
-var yValues = [5, 49, 74, 24, 30, 8];
+var yValues = branch_count_no ;
 var barColors = [
     "#7CC6FE",
     "#abfc7c",

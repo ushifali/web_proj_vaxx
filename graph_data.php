@@ -69,6 +69,41 @@ $result_extract = mysqli_fetch_array($EEE_query_execute);
 $EEE_count = $result_extract['u'];
 
 
+// for the third graph_analysis
+
+$CSE_query = "SELECT count(*) as u FROM user_data where branch='CSE' and vacc_status='no'";
+$CSE_query_execute = mysqli_query($conn, $CSE_query);
+$result_extract = mysqli_fetch_array($CSE_query_execute);
+$CSE_count_no = $result_extract['u'];
+
+$ISE_query = "SELECT count(*) as u FROM user_data where branch='ISE' and vacc_status='no';";
+$ISE_query_execute = mysqli_query($conn, $ISE_query);
+$result_extract = mysqli_fetch_array($ISE_query_execute);
+$ISE_count_no = $result_extract['u'];
+
+
+$ME_query = "SELECT count(*) as u FROM user_data where branch='ME' and vacc_status='no';";
+$ME_query_execute = mysqli_query($conn, $ME_query);
+$result_extract = mysqli_fetch_array($ME_query_execute);
+$ME_count_no = $result_extract['u'];
+
+
+$BT_query = "SELECT count(*) as u FROM user_data where branch='BT' and vacc_status='no'";
+$BT_query_execute = mysqli_query($conn, $BT_query);
+$result_extract = mysqli_fetch_array($BT_query_execute);
+$BT_count_no = $result_extract['u'];
+
+
+$ECE_query = "SELECT count(*) as u FROM user_data where branch='ECE' and vacc_status='no';";
+$ECE_query_execute = mysqli_query($conn, $ECE_query);
+$result_extract = mysqli_fetch_array($ECE_query_execute);
+$ECE_count_no = $result_extract['u'];
+
+$EEE_query = "SELECT count(*) as u FROM user_data where branch='EEE' and vacc_status='no';";
+$EEE_query_execute = mysqli_query($conn, $EEE_query);
+$result_extract = mysqli_fetch_array($EEE_query_execute);
+$EEE_count_no = $result_extract['u'];
+
 $conn->close();
 
 ?>

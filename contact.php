@@ -42,7 +42,7 @@ session_start();
 
         <ul class="nav-links">
 
-            <li ">
+            <li>
                 <a href=" dashboard.php">
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
@@ -59,7 +59,7 @@ session_start();
                     <span class="link_name">Homepage</span>
                 </a>
                 <ul class="sub-menu blank">
-                    <li><a class="link_name" href="Homepage.php">Homepage</a></li>
+                    <li><a class="link_name" href="homepage.php">Homepage</a></li>
                 </ul>
             </li>
 
@@ -129,9 +129,6 @@ session_start();
                     echo "
                     <button><a href=\"login.php\">LOG IN</a></button>";
                 } ?>
-
-
-                ?>
             </span>
         </div>
 
