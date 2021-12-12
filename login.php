@@ -169,11 +169,11 @@ session_start();
 
                     <div id="inputsection">
 
-                        <label for="lusername">Username:</label>
-                        <input type="text" id="username" required autocomplete="on" name="username" onkeyup="validateUsername(value)"><br>
-                        <span id="login_username_warning">Username should be your USN</span>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" required autocomplete="on" name="username" onchange="validate_uname(value)"><br>
+                        <div id="usn_error">Username must be your USN</div>
 
-                        <label for="lpassword">Password:</label>
+                        <label for="password">Password:</label>
                         <input type="password" id="password" name="password" required autocomplete="on">
 
                         <br>
@@ -244,7 +244,7 @@ session_start();
             </div>
         </footer>
     </section>
-    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="signup.js"></script>
     <script type="text/javascript" src="navigation.js"></script>
 
 </body>
