@@ -154,7 +154,7 @@ session_start();
                     <label for="branch">Branch:</label>
 
                     <select id="branch">
-                        <option value="none" selected disabled none>Select a branch</option>
+                        <!-- <option value="none" selected disabled none>Select a branch</option> -->
                         <option value="CSE">Computer Science and Engineering</option>
                         <option value="ISE">Information Science and Engineering</option>
                         <option value="ECE">Electronics and Communications Engineering</option>
@@ -166,7 +166,7 @@ session_start();
                 <div>
                     <label for="year">Year:</label>
                     <select id="year">
-                        <option value="none" selected disabled none>Select a year</option>
+                        <!-- <option value="none" selected disabled none>Select a year</option> -->
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
                         <option value="3">3rd Year</option>
@@ -174,7 +174,7 @@ session_start();
                     </select>
                 </div>
                 <!-- please put an image-> in go -->
-                <button type="submit" id="classroom_submit_btn">Go</button>
+                <!-- <button type="submit" id="classroom_submit_btn">Go</button> -->
             </form>
 
 
@@ -272,7 +272,23 @@ session_start();
                 <div class="left box">
                     <div class="upper">
                         <div class="topic">About us</div>
-                        <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+                        <p><i class="fas fa-solid fa-virus"></i> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+
+                        <div>
+                            SHIFALI U: 
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>
+                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>
+                        </div>
+
+                        <div>
+
+SHIVANI GIRISH KARKERA :
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>
+                            <a href=""><i class="fab fa-linkedin contact_us_icon"></i></a>
+
+                        </div>
                     </div>
 
                 </div>
@@ -282,18 +298,18 @@ session_start();
                     <div class="topic">Contact us</div>
                     <div class="phone">
 
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 80958 13777</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs176@nmamit.in</a>
                     </div>
                     <br>
                     <div class="phone">
 
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 94810 17173</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs178@nmamit.in</a>
 
                     </div>
                 </div>
@@ -307,7 +323,6 @@ session_start();
 
 
     <script type="text/javascript" src="navigation.js"></script>
-    <script type="text/javascript" src="dashboard.js"></script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

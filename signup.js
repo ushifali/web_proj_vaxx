@@ -19,8 +19,7 @@ function validate_uname(value)
         {
             email.style.border = "none";
             email.style.borderBottom = "1px solid #aec0b9";
-            usn_error.style.display = 'none';
-     
+            usn_error.style.display = 'none';  
             
         }
     else {
