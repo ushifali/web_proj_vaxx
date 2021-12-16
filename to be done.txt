@@ -1,6 +1,7 @@
 frontend
 
-    ->>change the links of footer in all the pages the insta linkedln etd    
+    ->>change the links of footer in all the pages the insta linkedln etd
+    change footer from classroom    
 
     ->> insert quiz in home page
 
