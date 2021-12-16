@@ -144,3 +144,11 @@ input[type="password"] {
     padding:5px;
     display: none;
 }
+
+#already_signed{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 360px);
+}

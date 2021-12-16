@@ -45,7 +45,7 @@ session_start();
 
         <ul class="nav-links">
 
-            <li ">
+            <li>
                 <a href=" dashboard.php">
                 <i class='bx bx-grid-alt'></i>
                 <span class="link_name">Dashboard</span>
@@ -132,6 +132,7 @@ session_start();
                 // Start the session
                 if (isset($_SESSION['usn'])) {
 
+                    
                     $welcome_name = $_SESSION['usn'];
                     echo  "$welcome_name &nbsp; &nbsp;";
                     echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
@@ -146,6 +147,8 @@ session_start();
             <!-- <button>Register</button> -->
         </div>
 
+
+        <?php if (!isset($_SESSION['usn'])) {?>
         <div id="login_content">
 
             <!-- image as a link. on clicking image it will lead to the link in the tag -->
@@ -193,7 +196,11 @@ session_start();
         </div>
 
 
-
+        <?php } else { ?>
+            <div id="already_signed">
+                <h2>You have already logged in </h2>
+            </div>
+        <?php } ?>
 
         <footer>
             <div class="content">
