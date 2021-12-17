@@ -17,7 +17,7 @@ $x = $query_result_not_vaccinated['count_of_not_vaxx'];
 
 
 
-$query = "SELECT count(*) as count_of_not_vaxx from user_data, user_vaxx_details where vacc_status='yes' and second_status='yes';";
+$query = "SELECT count(*) as count_of_not_vaxx from user_data U, user_vaxx_details UD where U.usn=UD.usn and vacc_status='yes' and second_status='yes';";
 $query_fully_vaccinated = mysqli_query($con, $query);
 
 $query_result_fully_vaccinated = mysqli_fetch_array($query_fully_vaccinated);
@@ -25,7 +25,7 @@ $query_result_fully_vaccinated = mysqli_fetch_array($query_fully_vaccinated);
 $y = $query_result_fully_vaccinated['count_of_not_vaxx'];
 
 
-$query = "SELECT count(*) as count_of_not_vaxx from user_data, user_vaxx_details where vacc_status='yes' and second_status='no';";
+$query = "SELECT count(*) as count_of_not_vaxx from user_data U, user_vaxx_details UD where U.usn=UD.usn and vacc_status='yes' and second_status='no';";
 $query_p_vaccinated = mysqli_query($con, $query);
 
 $query_result_p_vaccinated = mysqli_fetch_array($query_p_vaccinated);
