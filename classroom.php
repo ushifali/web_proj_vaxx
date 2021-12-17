@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'classroom_graph.php';
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +27,25 @@ session_start();
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+
+        // function sendvalue(x,y)
+        // {
+        //     console.log(x,y);
+        // }
+        function sendvalue(firstvalue, secondvalue) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(xmlhttp.responseText);
+                }
+            };
+            xmlhttp.open("GET", "classroom_graph.php?q=" + firstvalue + "&x=" + secondvalue, true);
+            xmlhttp.send();
+        }
+    </script>
+
 </head>
 
 
@@ -149,11 +169,11 @@ session_start();
                 Check it out !
             </div>
 
-            <form action="" id="classroom_submit">
+            <form action="" method="GET" id="classroom_submit">
                 <div>
                     <label for="branch">Branch:</label>
 
-                    <select id="branch">
+                    <select id="branch" name="branch" onchange="sendvalue(this.value, year.value)">
                         <!-- <option value="none" selected disabled none>Select a branch</option> -->
                         <option value="CSE">Computer Science and Engineering</option>
                         <option value="ISE">Information Science and Engineering</option>
@@ -165,7 +185,7 @@ session_start();
 
                 <div>
                     <label for="year">Year:</label>
-                    <select id="year">
+                    <select id="year" name="year" onchange="sendvalue(branch.value, this.value)">
                         <!-- <option value="none" selected disabled none>Select a year</option> -->
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
@@ -183,15 +203,19 @@ session_start();
 
             <div id="content_arrange">
 
-                <div id="graph_analysis" data-aos="fade-right">
-                    <div id="pie_chat_for_vaccines_taken">
+
+                <div id="graph_analysis">
+                    <div id="pie_chat_for_vaccines_taken" data-aos="fade-right">
                         <canvas id="piechart"></canvas>
                     </div>
 
-                    <div id="branch_wise_vaccinated_bar_chart " data-aos="fade-right">
-                        <canvas id="barchart"></canvas>
-                    </div>
+                    <!-- <div id="image_in_dashboard">
+                <img src="images/vaccine-vaccination.jpg">
+              </div> -->
 
+                    <div id="branch_wise_not_vaccinated_bar_chart" data-aos="zoom-in">
+                        <canvas id="horizontalbarchart"></canvas>
+                    </div>
                 </div>
 
 
@@ -275,7 +299,7 @@ session_start();
                         <p><i class="fas fa-solid fa-virus"></i> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
 
                         <div>
-                            SHIFALI U: 
+                            SHIFALI U:
                             <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>
                             <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>
                             <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>
@@ -283,7 +307,7 @@ session_start();
 
                         <div>
 
-SHIVANI GIRISH KARKERA :
+                            SHIVANI GIRISH KARKERA :
                             <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>
                             <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>
                             <a href=""><i class="fab fa-linkedin contact_us_icon"></i></a>
@@ -330,6 +354,8 @@ SHIVANI GIRISH KARKERA :
             duration: 1000
         });
     </script>
+
+    <script src="classroom.js"></script>
 </body>
 
 </html>

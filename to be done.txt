@@ -8,8 +8,7 @@ frontend
     -> image carasoul(bootstrap maybe download)
 
     
-backend
-   
+backend   
 
     ->contact us footer make it send mail to us and one sending the user thanking for suggestions or whatever
 
