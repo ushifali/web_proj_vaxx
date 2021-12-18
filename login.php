@@ -47,8 +47,8 @@ session_start();
 
             <li>
                 <a href=" dashboard.php">
-                <i class='bx bx-grid-alt'></i>
-                <span class="link_name">Dashboard</span>
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
                 </a>
 
                 <ul class="sub-menu blank">
@@ -132,7 +132,7 @@ session_start();
                 // Start the session
                 if (isset($_SESSION['usn'])) {
 
-                    
+
                     $welcome_name = $_SESSION['usn'];
                     echo  "$welcome_name &nbsp; &nbsp;";
                     echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
@@ -148,52 +148,52 @@ session_start();
         </div>
 
 
-        <?php if (!isset($_SESSION['usn'])) {?>
-        <div id="login_content">
+        <?php if (!isset($_SESSION['usn'])) { ?>
+            <div id="login_content">
 
-            <!-- image as a link. on clicking image it will lead to the link in the tag -->
-            <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
-
-
-            <div id="login_page">
-
-                <!-- k for some reason live server doesnt redirect when method is post so dont use liver server while debug on input page -->
-                <!-- also the same issue is still unsolved in github -->
-
-                <!-- k u can use liveserver on tghe page but still cant redirect from login to inputform page -->
+                <!-- image as a link. on clicking image it will lead to the link in the tag -->
+                <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
 
 
-                <form id="login_info" method="POST" action="login_p.php">
+                <div id="login_page">
+
+                    <!-- k for some reason live server doesnt redirect when method is post so dont use liver server while debug on input page -->
+                    <!-- also the same issue is still unsolved in github -->
+
+                    <!-- k u can use liveserver on tghe page but still cant redirect from login to inputform page -->
 
 
-                    <h1>Log In</h1><br>
-
-                    <p>Welcome to Vaxx <br></p>
-
-                    <div id="inputsection">
-
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" required autocomplete="on" name="username" onchange="validate_uname(value)"><br>
-                        <div id="usn_error">Username must be your USN</div>
-
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required autocomplete="on">
-
-                        <br>
-
-                        <br>
-                        <button id="login_submit" type="submit">LOG IN</button><br>
-                        <a href="signup.php" id="new_user"> No account? Create an account.</a>
-                    </div>
-
-                </form>
+                    <form id="login_info" method="POST" action="login_p.php">
 
 
+                        <h1>Log In</h1><br>
 
+                        <p>Welcome to Vaxx <br></p>
+
+                        <div id="inputsection">
+
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" required autocomplete="on" name="username" onchange="validate_uname(value)"><br>
+                            <div id="usn_error">Username must be your USN</div>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required autocomplete="on">
+
+                            <br>
+
+                            <br>
+                            <button id="login_submit" type="submit">LOG IN</button><br>
+                            <a href="signup.php" id="new_user"> No account? Create an account.</a>
+                        </div>
+
+                    </form>
+
+
+
+
+                </div>
 
             </div>
-
-        </div>
 
 
         <?php } else { ?>
@@ -207,7 +207,24 @@ session_start();
                 <div class="left box">
                     <div class="upper">
                         <div class="topic">About us</div>
-                        <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+                        <p> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+
+                        <div>
+
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIFALI U
+                        </div>
+
+                        <div>
+
+
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shivani-girish-karkera-71842a19b/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIVANI GIRISH KARKERA
+                        </div>
                     </div>
 
                 </div>
@@ -216,19 +233,18 @@ session_start();
 
                     <div class="topic">Contact us</div>
                     <div class="phone">
-
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 80958 13777</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs176@nmamit.in</a>
                     </div>
                     <br>
                     <div class="phone">
 
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 94810 17173</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs178@nmamit.in</a>
 
                     </div>
                 </div>

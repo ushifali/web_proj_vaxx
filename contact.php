@@ -21,6 +21,21 @@ session_start();
     <!-- linking jquery by cdn -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <!-- for the alert cdn -->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script type="text/javascript">
+        function submit_alert() {
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Your SUggestion has been sent!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -44,8 +59,8 @@ session_start();
 
             <li>
                 <a href=" dashboard.php">
-                <i class='bx bx-grid-alt'></i>
-                <span class="link_name">Dashboard</span>
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
                 </a>
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="dashboard.php">Dashboard</a></li>
@@ -169,7 +184,7 @@ session_start();
                             </div>
 
                             <div class="button">
-                                <button type="submit">Send Now</button>
+                                <button type="submit" onclick="submit_alert()">Send Now</button>
 
                             </div>
                         </form>
@@ -184,7 +199,24 @@ session_start();
                 <div class="left box">
                     <div class="upper">
                         <div class="topic">About us</div>
-                        <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+                        <p> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+
+                        <div>
+
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIFALI U
+                        </div>
+
+                        <div>
+
+
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shivani-girish-karkera-71842a19b/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIVANI GIRISH KARKERA
+                        </div>
                     </div>
 
                 </div>
@@ -193,19 +225,18 @@ session_start();
 
                     <div class="topic">Contact us</div>
                     <div class="phone">
-
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 80958 13777</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs176@nmamit.in</a>
                     </div>
                     <br>
                     <div class="phone">
 
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 94810 17173</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs178@nmamit.in</a>
 
                     </div>
                 </div>

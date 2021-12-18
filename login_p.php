@@ -16,7 +16,7 @@
     $username_existance_query = "SELECT upassword from login where username = '".$username."';";
     $query = mysqli_query($con, $username_existance_query);
 
-$query_result = mysqli_fetch_array($query);
+    $query_result = mysqli_fetch_array($query);
 
     // echo "$query_result[upassword] ";
 

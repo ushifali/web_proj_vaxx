@@ -51,8 +51,8 @@ session_start();
 
             <li>
                 <a href="dashboard.php">
-                <i class='bx bx-grid-alt'></i>
-                <span class="link_name">Dashboard</span>
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Dashboard</span>
                 </a>
                 <ul class="sub-menu blank">
                     <li><a class="link_name" href="dashboard.php">Dashboard</a></li>
@@ -135,71 +135,71 @@ session_start();
                 // echo $_SESSION['usn'];
                 // Start the session
                 if (isset($_SESSION['usn'])) {
-                    
-                    
+
+
                     $welcome_name = $_SESSION['usn'];
                     echo  "$welcome_name &nbsp; &nbsp;";
                     echo "<button><a href=\"logout.php\">LOG OUT</a></button>";
                 } else {
                     echo "Guest User &nbsp";
                     echo "<button><a href=\"login.php\">LOG IN</a></button>";
-                }?></span>
+                } ?></span>
         </div>
 
-       <?php if (!isset($_SESSION['usn'])) { ?>
-        <div id="login_content">
+        <?php if (!isset($_SESSION['usn'])) { ?>
+            <div id="login_content">
 
-            <!-- image as a link. on clicking image it will lead to the link in the tag -->
-            <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
-
-
-            <div id="login_page">
+                <!-- image as a link. on clicking image it will lead to the link in the tag -->
+                <!-- <a href="dashboard.php"><img id="go_back_btn" src="https://img.icons8.com/bubbles/50/000000/back.png"></a> -->
 
 
-                <form id="login_info" method="POST" action="signup_p.php">
-
-                    <h1>Sign Up</h1><br>
-
-                    <p>Welcome to Vaxx <br></p>
-
-                    <div id="inputsection">
-
-                        <label for="username">Username:</label>
-                        <input type="text" name="username" required autocomplete="on" onchange="validate_uname(value)"><br>
-
-                        <div id="usn_error">Username must be your USN</div>
+                <div id="login_page">
 
 
-                        <label for="password">Password:</label>
-                        <input type="password" name="password1" required>
-                        <br>
+                    <form id="login_info" method="POST" action="signup_p.php">
 
-                        <label for="password"> Re-enter Password:</label>
-                        <input type="password" name="password2" required onchange="validated()">
+                        <h1>Sign Up</h1><br>
 
-                        <div id="pass2_error">Password not matching
+                        <p>Welcome to Vaxx <br></p>
+
+                        <div id="inputsection">
+
+                            <label for="username">Username:</label>
+                            <input type="text" name="username" required autocomplete="on" onchange="validate_uname(value)"><br>
+
+                            <div id="usn_error">Username must be your USN</div>
+
+
+                            <label for="password">Password:</label>
+                            <input type="password" name="password1" required>
+                            <br>
+
+                            <label for="password"> Re-enter Password:</label>
+                            <input type="password" name="password2" required onchange="validated()">
+
+                            <div id="pass2_error">Password not matching
+                            </div>
+                            <div id="pass2_verified">Password matches
+                            </div>
+
+                            <br>
+                            <button id="login_submit" type="submit">Sign In</button><br>
+                            <a href="login.php" id="new_user"> Already have an account? Log in</a>
                         </div>
-                        <div id="pass2_verified">Password matches
-                        </div>
 
-                        <br>
-                        <button id="login_submit" type="submit">Sign In</button><br>
-                        <a href="login.php" id="new_user"> Already have an account? Log in</a>
-                    </div>
+                    </form>
 
-                </form>
 
+                </div>
 
             </div>
 
-        </div>
-
 
         <?php } else { ?>
-                <div id="already_signed">
-                    <h2>You have already logged in </h2>
-                </div>
-            <?php } ?>
+            <div id="already_signed">
+                <h2>You have already logged in </h2>
+            </div>
+        <?php } ?>
 
 
         <footer>
@@ -207,7 +207,24 @@ session_start();
                 <div class="left box">
                     <div class="upper">
                         <div class="topic">About us</div>
-                        <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+                        <p> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+
+                        <div>
+
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIFALI U
+                        </div>
+
+                        <div>
+
+
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shivani-girish-karkera-71842a19b/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIVANI GIRISH KARKERA
+                        </div>
                     </div>
 
                 </div>
@@ -216,19 +233,18 @@ session_start();
 
                     <div class="topic">Contact us</div>
                     <div class="phone">
-
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 80958 13777</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs176@nmamit.in</a>
                     </div>
                     <br>
                     <div class="phone">
 
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 94810 17173</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs178@nmamit.in</a>
 
                     </div>
                 </div>

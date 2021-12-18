@@ -252,7 +252,24 @@ session_start();
                 <div class="left box">
                     <div class="upper">
                         <div class="topic">About us</div>
-                        <p>VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+                        <p> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+
+                        <div>
+
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIFALI U
+                        </div>
+
+                        <div>
+
+
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shivani-girish-karkera-71842a19b/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIVANI GIRISH KARKERA
+                        </div>
                     </div>
 
                 </div>
@@ -261,19 +278,18 @@ session_start();
 
                     <div class="topic">Contact us</div>
                     <div class="phone">
-
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 80958 13777</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 80958 13777</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs176@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs176@nmamit.in</a>
                     </div>
                     <br>
                     <div class="phone">
 
-                        <a href="#"><i class="fas fa-phone-volume"></i>+91 94810 17173</a>
+                        <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 94810 17173</a>
                     </div>
                     <div class="email">
-                        <a href="#"><i class="fas fa-envelope"></i>4nm19cs178@nmamit.in</a>
+                        <a href="#"><i class="fas fa-envelope"></i>&nbsp;4nm19cs178@nmamit.in</a>
 
                     </div>
                 </div>

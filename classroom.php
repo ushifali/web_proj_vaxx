@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'classroom_graph.php';
 ?>
 
 <!DOCTYPE html>
@@ -28,20 +27,27 @@ include 'classroom_graph.php';
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript">
-
-        // function sendvalue(x,y)
-        // {
-        //     console.log(x,y);
+    <script>
+        // function sendvalue(firstvalue, secondvalue) {
+        //     var xmlhttp = new XMLHttpRequest();
+        //     xmlhttp.onreadystatechange = function() {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             document.getElementById("graph_analysis").innerHTML = this.responseText;
+        //         }
+        //     };
+        //     xmlhttp.open("GET", "classroom_graph.php?q=" + firstvalue + "&x=" + secondvalue, true);
+        //     xmlhttp.send();
         // }
-        function sendvalue(firstvalue, secondvalue) {
+
+        function table_format(firstvalue, secondvalue) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    console.log(xmlhttp.responseText);
+                    document.getElementById("table_formed").innerHTML = this.responseText;
+                    console.log(this.responseText);
                 }
             };
-            xmlhttp.open("GET", "classroom_graph.php?q=" + firstvalue + "&x=" + secondvalue, true);
+            xmlhttp.open("GET", "classroom_table.php?a=" + firstvalue + "&b=" + secondvalue, true);
             xmlhttp.send();
         }
     </script>
@@ -173,8 +179,8 @@ include 'classroom_graph.php';
                 <div>
                     <label for="branch">Branch:</label>
 
-                    <select id="branch" name="branch" onchange="sendvalue(this.value, year.value)">
-                        <!-- <option value="none" selected disabled none>Select a branch</option> -->
+                    <select id="branch" name="branch" onchange="table_format(this.value, year.value)">
+                        <option value="none" selected disabled none>Select a branch</option>
                         <option value="CSE">Computer Science and Engineering</option>
                         <option value="ISE">Information Science and Engineering</option>
                         <option value="ECE">Electronics and Communications Engineering</option>
@@ -185,8 +191,8 @@ include 'classroom_graph.php';
 
                 <div>
                     <label for="year">Year:</label>
-                    <select id="year" name="year" onchange="sendvalue(branch.value, this.value)">
-                        <!-- <option value="none" selected disabled none>Select a year</option> -->
+                    <select id="year" name="year" onchange="table_format(this.value, year.value)">
+                        <option value="none" selected disabled none>Select a year</option>
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
                         <option value="3">3rd Year</option>
@@ -203,19 +209,8 @@ include 'classroom_graph.php';
 
             <div id="content_arrange">
 
-
                 <div id="graph_analysis">
-                    <div id="pie_chat_for_vaccines_taken" data-aos="fade-right">
-                        <canvas id="piechart"></canvas>
-                    </div>
 
-                    <!-- <div id="image_in_dashboard">
-                <img src="images/vaccine-vaccination.jpg">
-              </div> -->
-
-                    <div id="branch_wise_not_vaccinated_bar_chart" data-aos="zoom-in">
-                        <canvas id="horizontalbarchart"></canvas>
-                    </div>
                 </div>
 
 
@@ -229,47 +224,8 @@ include 'classroom_graph.php';
                 </div>
 
                 <div class="container table-responsive py-5" data-aos="zoom-out">
-                    <table class="table table-bordered table-hover table-striped">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">USN</th>
-                                <th scope="col">NAME</th>
-                                <th scope="col">STATUS</th>
-                            </tr>
-                        </thead>
+                    <table class="table table-bordered table-hover table-striped" id="table_formed">
 
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>NO</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>YES</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>NO</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Larry</td>
-                                <td>YES</td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Larry</td>
-                                <td>NO</td>
-
-                            </tr>
-                        </tbody>
                     </table>
                 </div>
 
@@ -284,6 +240,7 @@ include 'classroom_graph.php';
                 </section>
 
             <?php
+                
             } ?>
 
 
@@ -296,22 +253,23 @@ include 'classroom_graph.php';
                 <div class="left box">
                     <div class="upper">
                         <div class="topic">About us</div>
-                        <p><i class="fas fa-solid fa-virus"></i> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
+                        <p> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
 
-                        <div>
-                            SHIFALI U:
-                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>
-                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>
-                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>
+                        <div >
+
+                            <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shifali-u-055748192/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIFALI U
                         </div>
 
                         <div>
 
-                            SHIVANI GIRISH KARKERA :
-                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>
-                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>
-                            <a href=""><i class="fab fa-linkedin contact_us_icon"></i></a>
 
+                            <a href="http://www.instagram.com/shivani_.karkera"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
+                            <a href="https://github.com/shivanikarkera"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
+                            <a href="https://www.linkedin.com/in/shivani-girish-karkera-71842a19b/"><i class="fab fa-linkedin contact_us_icon"></i></a>&nbsp;
+                            : SHIVANI GIRISH KARKERA
                         </div>
                     </div>
 
@@ -321,7 +279,6 @@ include 'classroom_graph.php';
 
                     <div class="topic">Contact us</div>
                     <div class="phone">
-
                         <a href="#"><i class="fas fa-phone-volume"></i>&nbsp;+91 80958 13777</a>
                     </div>
                     <div class="email">
@@ -355,7 +312,6 @@ include 'classroom_graph.php';
         });
     </script>
 
-    <script src="classroom.js"></script>
 </body>
 
 </html>

@@ -40,4 +40,7 @@ $query_test= mysqli_query($con, $query);
 $query_result_test = mysqli_fetch_array($query_test);
 
 $a = $query_result_test['count_of_not_vaxx'];
+
+mysqli_close($con);
+
 ?>

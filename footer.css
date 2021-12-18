@@ -14,6 +14,7 @@ footer .content {
 
 footer .content p,
 a {
+    letter-spacing:1px;
     color: #fff;
 }
 
@@ -100,16 +101,29 @@ footer .bottom {
     padding: 0 40px 5px 0;
 }
 
-footer .bottom a {
-    color: var(--dark-green);
-}
-
-footer a {
+footer .left i {
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid var(--dark-theme);
+    margin: 30px 5px 0 0;
     transition: all 0.3s ease;
 }
 
+footer .left div{
+    color:white !important;
+}
+
+footer i:hover {
+    border-color: var(--dark-green);
+}
+
 footer a:hover {
-    color: var(--dark-green);
+    color: white;
 }
 
 @media (max-width:1200px) {
@@ -143,6 +157,22 @@ footer a:hover {
     }
 }
 
-.phone , .email{
-    font-size:15px;
+.phone,
+.email {
+    font-size: 15px;
+}
+
+#topic {
+    font-size: 1.3rem;
+
+}
+
+#topic div {
+    color: white !important;
+}
+
+.fa-instagram:before,
+.fa-github,
+.fa-linkedin {
+    font-size: 28px !important;
 }
