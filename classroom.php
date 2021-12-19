@@ -32,8 +32,8 @@ session_start();
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("graph_analysis").innerHTML = this.responseText;
-                    console.log(this.responseText);                       
+                    document.getElementById("pie_chat_for_vaccines_taken").innerHTML = this.responseText;
+                    console.log(this.responseText);
                 }
             };
             xmlhttp.open("GET", "classroom_graph.php?a=" + firstvalue + "&b=" + secondvalue, true);
@@ -45,16 +45,15 @@ session_start();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("table_formed").innerHTML = this.responseText;
-                    console.log(this.responseText);
-
-
                 }
             };
             xmlhttp.open("GET", "classroom_table.php?a=" + firstvalue + "&b=" + secondvalue, true);
             xmlhttp.send();
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
 
 </head>
 
@@ -215,6 +214,40 @@ session_start();
 
                 <div id="graph_analysis">
 
+                    <div id="pie_chat_for_vaccines_takens" data-aos="fade-right">
+                        <canvas id="piechart"></canvas>
+                    </div>
+
+                    <script type="text/javascript">
+                        const data = {
+                            labels: [
+                                'Red',
+                                'Blue',
+                                'Yellow'
+                            ],
+                            datasets: [{
+                                label: 'My First Dataset',
+                                data: [300, 50, 100],
+                                backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        };
+
+                        const config = {
+                            type: 'pie',
+                            data: data,
+                        };
+
+
+                        const myChart = new Chart(
+                            document.getElementById('piechart'),
+                            config
+                        );
+                    </script>
                 </div>
 
 
@@ -315,6 +348,8 @@ session_start();
             duration: 1000
         });
     </script>
+
+
 
 </body>
 

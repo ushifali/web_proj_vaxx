@@ -26,13 +26,27 @@ session_start();
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script type="text/javascript">
+        // function show_alert() {
+        //     var xmlhttp = new XMLHttpRequest();
+        //     xmlhttp.onreadystatechange = function() {
+        //         if (this.readyState == 4 && this.status == 200) {
+        //             document.getElementById("alert").innerHTML = this.responseText;
+        //             submit_alert()
+        //         }
+        //     };
+        //     xmlhttp.open("GET", "contact_php.php", true);
+        //     xmlhttp.send();
+        // }
+
         function submit_alert() {
 
             var name = document.getElementById('name').value;
             var message = document.getElementById('message').value;
             var email = document.getElementById('email').value;
 
-            if(name=='' || message=='' || email=='') {return}
+            if (name == '' || message == '' || email == '') {
+                return
+            }
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -186,11 +200,11 @@ session_start();
                             </div>
 
                             <div class="input-box message-box">
-                                <input type="text" id="message" placeholder="Enter your message" required >
+                                <input type="text" id="message" placeholder="Enter your message" required>
                             </div>
 
                             <div class="button">
-                                <button type="submit" onclick="submit_alert()">Send Now</button>
+                                <button type="button" onclick="submit_alert()">Send Now</button>
 
                             </div>
                         </form>
@@ -199,6 +213,8 @@ session_start();
             </div>
 
         </div>
+
+        <!-- <div id="alert"></div> -->
 
         <footer>
             <div class="content">

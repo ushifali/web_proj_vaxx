@@ -37,18 +37,11 @@
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    // $query = "SELECT count(*) as u from user_data where branch='$a' and uyear=$b;";
-    // $query_not_vaccinated = mysqli_query($conn, $query);
 
-    // $query_result_not_vaccinated = mysqli_fetch_array($query_not_vaccinated);
-
-    // $x = $query_result_not_vaccinated['u'];
-
-
-    $sql_covishield = "select count(*)  as u  from user_data ,user_vaxx_details where vacc_type='Covishield' and branch='$a' and uyear=$b;";
-    $sql_Covaxin = "select count(*) as u  from user_data ,user_vaxx_details where vacc_type='Covaxin'  and branch='$a' and uyear=$b;";
-    $sql_Sputnik = "select count(*)  as u from user_data ,user_vaxx_details where vacc_type='Sputnik'  and branch='$a' and uyear=$b;";
-    $sql_none = "select count(*)  as u from user_data ,user_vaxx_details where vacc_status='no'  and branch='$a' and uyear=$b;";
+    $sql_covishield = "select count(*)  as u  from user_data u,user_vaxx_details d  where vacc_type='Covishield' and branch='$a' and uyear=$b and d.usn = u.usn;";
+    $sql_Covaxin = "select count(*) as u  from user_data u  ,user_vaxx_details d  where vacc_type='Covaxin'  and branch='$a' and uyear=$b and d.usn = u.usn;";
+    $sql_Sputnik = "select count(*)  as u from user_data u,user_vaxx_details d where vacc_type='Sputnik'  and branch='$a' and uyear=$b and d.usn = u.usn;";
+    $sql_none = "select count(*)  as u from user_data u ,user_vaxx_details d where vacc_status='no'  and branch='$a' and uyear=$b and d.usn = u.usn;";
 
     $executed_query1 = mysqli_query($conn, $sql_covishield);
     $executed_query2 = mysqli_query($conn, $sql_Covaxin);
@@ -70,18 +63,17 @@
     echo "$q";
     echo "$r";
     echo "$s";
+    ?>
+    <!-- <canvas id="piechart"></canvas> -->
 
-    // echo "
-    // // <div id=\"pie_chat_for_vaccines_taken\" data-aos=\"fade-right\">
 
-    // // <h2>" $p","$q","$r","$s"</h2>;
-    // //     <canvas id=\"piechart\"></canvas>
-    // // </div>";
-
-    
     
 
 
+
+
+
+    <?php
     mysqli_close($conn);
 
     ?>
@@ -89,39 +81,3 @@
 </body>
 
 </html>
-<!-- 
- <
-                        script type = "text/javascript" >
-                            Chart.defaults.global.defaultFontColor = "#fff";
-                        // for pie chart
-                        var xValues = ["COVISHIELD", "COVAXIN", "SPUTNIK V", "NONE"];
-                        // var yValues = [<?php echo $p ?>, <?php echo $q ?>, <?php echo $r ?>, <?php echo $s ?>];
-
-                        console.log(<?php echo $p ?>);
-                        console.log(yValues);
-                        var barColors = [
-                            "#abfc7c",
-                            "#00aba9",
-                            "#2b5797",
-                            "#13474A",
-                        ];
-
-                        new Chart("piechart", {
-                            type: "pie",
-                            data: {
-                                labels: xValues,
-                                datasets: [{
-                                    backgroundColor: barColors,
-                                    data: yValues
-                                }]
-                            },
-                            options: {
-                                title: {
-                                    display: true,
-                                    text: "Types of Vaccine taken by Students"
-                                }
-                            }
-
-
-                        });
-    </> -->
