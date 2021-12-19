@@ -8,15 +8,21 @@
 
      <?php
 
-     $a='CSE';
-     $b= '1';
+    //  $a="CSE";
+    //  $b= 1;
 
-     if(isset($a))
+     if(isset($_GET['a']))
         $a = $_GET['a'];
+        else {
+            $a = "CSE";
+        }
     
 
-     if(isset($b))
+     if(isset($_GET['b']))
         $b = $_GET['b'];
+    else {
+        $b =1;
+    }
 
         $con = mysqli_connect("localhost", "root", "", "vaxx");
 
@@ -25,10 +31,11 @@
         }
 
 
-        $sql = "SELECT usn,uname,branch FROM user_data WHERE branch='".$a."' and uyear='".$b."';";
+        $sql = "SELECT usn,uname,branch FROM user_data WHERE branch='$a' and uyear=$b;";
 
         
-        $result = mysqli_query($con, $sql);        
+        $result = mysqli_query($con, $sql);     
+        
 
         echo "<thead class=\"thead-dark\">
      <tr>

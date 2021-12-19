@@ -27,6 +27,12 @@ session_start();
 
     <script type="text/javascript">
         function submit_alert() {
+
+            var name = document.getElementById('name').value;
+            var message = document.getElementById('message').value;
+            var email = document.getElementById('email').value;
+
+            if(name=='' || message=='' || email=='') {return}
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
@@ -171,16 +177,16 @@ session_start();
                     <div class="right-side">
                         <div class="topic-text">Send us a message</div>
                         <p>If you have any work from us or any types of queries, you can send us a message </p>
-                        <form action="#">
+                        <form action="#" method="post">
                             <div class="input-box">
-                                <input type="text" placeholder="Enter your name" required>
+                                <input type="text" id="name" placeholder="Enter your name" required>
                             </div>
                             <div class="input-box">
-                                <input type="text" placeholder="Enter your email" required>
+                                <input type="text" id="email" placeholder="Enter your email" required>
                             </div>
 
                             <div class="input-box message-box">
-                                <input type="text" placeholder="Enter your comments" required>
+                                <input type="text" id="message" placeholder="Enter your message" required >
                             </div>
 
                             <div class="button">

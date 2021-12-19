@@ -28,16 +28,17 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
-        // function sendvalue(firstvalue, secondvalue) {
-        //     var xmlhttp = new XMLHttpRequest();
-        //     xmlhttp.onreadystatechange = function() {
-        //         if (this.readyState == 4 && this.status == 200) {
-        //             document.getElementById("graph_analysis").innerHTML = this.responseText;
-        //         }
-        //     };
-        //     xmlhttp.open("GET", "classroom_graph.php?q=" + firstvalue + "&x=" + secondvalue, true);
-        //     xmlhttp.send();
-        // }
+        function send_value(firstvalue, secondvalue) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("graph_analysis").innerHTML = this.responseText;
+                    console.log(this.responseText);                       
+                }
+            };
+            xmlhttp.open("GET", "classroom_graph.php?a=" + firstvalue + "&b=" + secondvalue, true);
+            xmlhttp.send();
+        }
 
         function table_format(firstvalue, secondvalue) {
             var xmlhttp = new XMLHttpRequest();
@@ -45,20 +46,24 @@ session_start();
                 if (this.readyState == 4 && this.status == 200) {
                     document.getElementById("table_formed").innerHTML = this.responseText;
                     console.log(this.responseText);
+
+
                 }
             };
             xmlhttp.open("GET", "classroom_table.php?a=" + firstvalue + "&b=" + secondvalue, true);
             xmlhttp.send();
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 </head>
 
 
 
-<body>
-    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body onload="table_format(branch.value, year.value);  send_value(branch.value, year.value)">
+    <script src=" https://kit.fontawesome.com/b99e675b6e.js">
+    </script>
+
 
 
     <nav class="sidebar close">
@@ -179,8 +184,7 @@ session_start();
                 <div>
                     <label for="branch">Branch:</label>
 
-                    <select id="branch" name="branch" onchange="table_format(this.value, year.value)">
-                        <option value="none" selected disabled none>Select a branch</option>
+                    <select id="branch" name="branch" onchange="table_format(this.value, year.value);  send_value(this.value, year.value)">
                         <option value="CSE">Computer Science and Engineering</option>
                         <option value="ISE">Information Science and Engineering</option>
                         <option value="ECE">Electronics and Communications Engineering</option>
@@ -191,8 +195,8 @@ session_start();
 
                 <div>
                     <label for="year">Year:</label>
-                    <select id="year" name="year" onchange="table_format(this.value, year.value)">
-                        <option value="none" selected disabled none>Select a year</option>
+                    <select id="year" name="year" onchange="table_format(branch.value, this.value); send_value(this.value, year.value)">
+
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
                         <option value="3">3rd Year</option>
@@ -240,7 +244,7 @@ session_start();
                 </section>
 
             <?php
-                
+
             } ?>
 
 
@@ -255,7 +259,7 @@ session_start();
                         <div class="topic">About us</div>
                         <p> &nbsp;VaXx is a website that helps track the vaccination status of the students in NMAMIT.</p>
 
-                        <div >
+                        <div>
 
                             <a href="http://www.instagram.com/u_shifali"><i class="fab fa-instagram contact_us_icon"></i></a>&nbsp;
                             <a href="https://github.com/ushifali"><i class="fab fa-github contact_us_icon"></i></a>&nbsp;
