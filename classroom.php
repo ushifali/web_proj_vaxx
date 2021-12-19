@@ -140,7 +140,7 @@ session_start();
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu' id="nav_bar1"></i>
-            <span class="text">Classroom Dashboard</span>
+            <span class="text">Classroom</span>
 
             <span id="welcome_txt"> Welcome,
                 <?php

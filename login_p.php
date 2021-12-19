@@ -22,7 +22,8 @@
 
     if($query_result['upassword']  == $password)
     {
-        $_SESSION['usn'] = $username;     
+        $_SESSION['usn'] = $username;
+    header('Location: inputform.php');    
     }
     else {
         echo "Login failed. Please try again: Error: ";
@@ -30,5 +31,5 @@
 
     mysqli_close($con);
 
-header('Location: inputform.php');
+
 ?>
