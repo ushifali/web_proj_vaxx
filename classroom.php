@@ -182,7 +182,7 @@ session_start();
 
                 <div>
                     <label for="year">Year:</label>
-                    <select id="year" name="year" onchange="table_format(branch.value, this.value); send_value(this.value, year.value)">
+                    <select id="year" name="year" onchange="table_format(branch.value, this.value); send_value(branch.value, this.value)">
 
                         <option value="1">1st Year</option>
                         <option value="2">2nd Year</option>
@@ -310,6 +310,7 @@ session_start();
 
         function send_value(firstvalue, secondvalue) {
             var xmlhttp = new XMLHttpRequest();
+            console.log(firstvalue, secondvalue);
             xmlhttp.open("GET", "classroom_graph.php?a=" + firstvalue + "&b=" + secondvalue, true);
             xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
