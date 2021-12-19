@@ -45,15 +45,24 @@ session_start();
             var email = document.getElementById('email').value;
 
             if (name == '' || message == '' || email == '') {
-                return
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'warning',
+                    title: 'Please fill the form before submitting',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             }
+            else{
+
             Swal.fire({
                 position: 'top-end',
                 icon: 'success',
-                title: 'Your SUggestion has been sent!',
+                title: 'Your Message has been sent!',
                 showConfirmButton: false,
                 timer: 1500
             })
+        }
         }
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

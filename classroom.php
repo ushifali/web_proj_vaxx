@@ -28,18 +28,6 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
-        function send_value(firstvalue, secondvalue) {
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.getElementById("pie_chat_for_vaccines_taken").innerHTML = this.responseText;
-                    console.log(this.responseText);
-                }
-            };
-            xmlhttp.open("GET", "classroom_graph.php?a=" + firstvalue + "&b=" + secondvalue, true);
-            xmlhttp.send();
-        }
-
         function table_format(firstvalue, secondvalue) {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
@@ -214,37 +202,11 @@ session_start();
 
                 <div id="graph_analysis">
 
-                    <div id="pie_chat_for_vaccines_takens" data-aos="fade-right">
-                        <canvas id="piechart"></canvas>
+                    <div id="pie_chat_for_vaccines_taken" data-aos="fade-right">
+
                     </div>
 
-                    <script type="text/javascript">
-                        const data = {
-                            labels: ["COVISHIELD", "COVAXIN", "SPUTNIK V", "NONE"],
-                            datasets: [{
-                                label: "Types of Vaccine taken by Students",
-                                data: [300, 50, 100,54],
-                                backgroundColor: [
-                                    "#abfc7c",
-                                    "#00aba9",
-                                    "#2b5797",
-                                    "#13474A",
-                                ],
-                                hoverOffset: 4
-                            }]
-                        };
 
-                        const config = {
-                            type: 'pie',
-                            data: data,
-                        };
-
-
-                        const myChart = new Chart(
-                            document.getElementById('piechart'),
-                            config
-                        );
-                    </script>
                 </div>
 
 
@@ -344,7 +306,58 @@ session_start();
         AOS.init({
             duration: 1000
         });
+
+
+        function send_value(firstvalue, secondvalue) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "classroom_graph.php?a=" + firstvalue + "&b=" + secondvalue, true);
+            xmlhttp.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            xmlhttp.send();
+
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById('pie_chat_for_vaccines_taken').innerHTML = '<canvas id="piechart"></canvas>';
+                    
+                    var x = Array.from(this.response);
+                    x=x.toString().replace(/\D/g, '');
+                    console.log(x);
+
+
+                    let data = {
+                        labels: ["COVISHIELD", "COVAXIN", "SPUTNIK V", "NONE"],
+                        datasets: [{
+                            label: "Types of Vaccine taken by Students",
+                            data: x,
+                            backgroundColor: [
+                                "#abfc7c",
+                                "#00aba9",
+                                "#2b5797",
+                                "#13474A",
+                            ],
+                            hoverOffset: 4
+                        }]
+
+                    }
+
+                    const config = {
+                        type: 'pie',
+                        data: data,
+                    };
+
+
+                    let myChart = new Chart(
+                        document.getElementById('piechart'),
+                        config
+                    );
+
+
+                }
+            }
+        }
     </script>
+
+
 
 
 

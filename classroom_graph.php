@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-
-<body>
-
-    <?php
+ <?php
 
     if (isset($_GET['a']))
         $a = $_GET['a'];
@@ -59,16 +47,7 @@
     $r = $query_array3['u'];
     $s = $query_array4['u'];
 
-    echo "$p";
-    echo "$q";
-    echo "$r";
-    echo "$s";
-    ?>
-    <?php
+    $info = array($p, $q, $r, $s);
+    echo json_encode($info);
+    
     mysqli_close($conn);
-
-    ?>
-
-</body>
-
-</html>
