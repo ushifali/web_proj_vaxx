@@ -26,7 +26,7 @@ session_start();
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
-
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -239,6 +239,34 @@ session_start();
                     </div>
                 </div>
             </div>
+            <div class="shareframe">
+
+            <h2>Share the Page :</h2>
+                <div class="frame">
+                    <a href="#" class="btn">
+                        <i class="fab fa-facebook-f" style="color: #3b5998;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fab fa-twitter" style="color: #00acee;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fab fa-dribbble" style="color: #ea4c89;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fab fa-linkedin-in" style="color:#0e76a8;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="fab fa-get-pocket" style="color:#ee4056;"></i>
+                    </a>
+                    <a href="#" class="btn">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+
 
 
 

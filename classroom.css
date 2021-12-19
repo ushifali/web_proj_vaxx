@@ -11,18 +11,6 @@
     row-gap: 20px;
 }
 
-#classroom_submit_btn {
-    letter-spacing: 2px;
-
-    font-size: 1.2em !important;
-    padding: 3px 25px;
-    border: none;
-    background-color: var(--light-theme);
-    color: var(--dark-theme);
-    box-shadow: 1.4px 4.9px 3.9px hsl(0deg 0% 0% / 0.19);
-    font-family: 'Poppins', sans-serif;
-
-}
 
 select {
     padding: 10px;
@@ -30,9 +18,6 @@ select {
 }
 
 
-#classroom_submit_btn:hover {
-    cursor: pointer;
-}
 
 
 .thead-dark th {

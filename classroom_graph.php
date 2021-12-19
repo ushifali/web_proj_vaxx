@@ -64,15 +64,6 @@
     echo "$r";
     echo "$s";
     ?>
-    <!-- <canvas id="piechart"></canvas> -->
-
-
-    
-
-
-
-
-
     <?php
     mysqli_close($conn);
 
