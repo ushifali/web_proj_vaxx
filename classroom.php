@@ -201,6 +201,7 @@ session_start();
             <div id="content_arrange">
 
                 <div id="graph_analysis">
+                    <h5>TYPES OF VACCINES TAKEN BY STUDENT:</h5>
 
                     <div id="pie_chat_for_vaccines_taken" data-aos="fade-right">
 
@@ -309,6 +310,7 @@ session_start();
 
 
         function send_value(firstvalue, secondvalue) {
+
             var xmlhttp = new XMLHttpRequest();
             console.log(firstvalue, secondvalue);
             xmlhttp.open("GET", "classroom_graph.php?a=" + firstvalue + "&b=" + secondvalue, true);
@@ -319,10 +321,11 @@ session_start();
             xmlhttp.onreadystatechange = function() {
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                     document.getElementById('pie_chat_for_vaccines_taken').innerHTML = '<canvas id="piechart"></canvas>';
-                    
+
                     var x = Array.from(this.response);
-                    x=x.toString().replace(/\D/g, '');
+                    x = x.toString().replace(/\D/g, '');
                     console.log(x);
+
 
 
                     let data = {
@@ -337,7 +340,15 @@ session_start();
                                 "#13474A",
                             ],
                             hoverOffset: 4
-                        }]
+                        }],
+                        options: {
+                            plugin: {
+                                title: {
+                                    display: true,
+                                    text: "Types of Vaccine taken by Students"
+                                }
+                            }
+                        }
 
                     }
 
