@@ -201,11 +201,39 @@ session_start();
             <div id="content_arrange">
 
                 <div id="graph_analysis">
-                    <h5>TYPES OF VACCINES TAKEN BY STUDENT:</h5>
 
                     <div id="pie_chat_for_vaccines_taken" data-aos="fade-right">
 
+
+
                     </div>
+
+                    <?php
+                    if (isset($_SESSION['usn'])) {
+                    ?>
+
+                        <div id="main_content_text">The vaccination status of every student is as below:
+                        </div>
+
+                        <div class="container table-responsive py-5" data-aos="zoom-out">
+                            <table class="table table-bordered table-hover table-striped" id="table_formed">
+
+                            </table>
+                        </div>
+
+                    <?php
+
+                    } else {
+                    ?>
+                        <section class="home-section" id="center_inside_this">
+                            <h3>
+                                Please Login to view individual status.</h3><br>
+                            <button id="login_butn"><a href="login.php">LOG IN</a></button>
+                        </section>
+
+                    <?php
+
+                    } ?>
 
 
                 </div>
@@ -213,7 +241,7 @@ session_start();
 
             </div>
 
-            <?php
+            <!-- <?php
             if (isset($_SESSION['usn'])) {
             ?>
 
@@ -238,7 +266,7 @@ session_start();
 
             <?php
 
-            } ?>
+            } ?> -->
 
 
 
@@ -326,8 +354,8 @@ session_start();
                     console.log(this.response);
                     var x = Array.from(this.response);
                     console.log(x);
-                    
-                    
+
+
                     x = x.toString().replace(/\D/g, '');
                     console.log(x);
 

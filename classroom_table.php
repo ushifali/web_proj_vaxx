@@ -51,7 +51,31 @@
             echo "<tr>";
             echo "<td scope=\"row\">" . $row['usn'] . "</td>";
             echo "<td>" . $row['uname'] . "</td>";
-            echo "<td>" . $row['branch'] . "</td>";
+
+            $sql1 = "SELECT vacc_status from user_data where usn = '" . $row['usn'] ."';";
+
+            $result1 = mysqli_query($con, $sql1);  
+            $result_extract = mysqli_fetch_array($result1);
+
+            if($result_extract['vacc_status'] == 'no')
+            {
+                echo "<td> NOT Vaccinated</td>";
+            }
+
+            else {
+                $sql2 = "SELECT second_status from user_vaxx_details where usn = '" . $row['usn'] . "';";
+
+                $result2 = mysqli_query($con, $sql2);
+                $result_extract2 = mysqli_fetch_array($result2);
+
+                if ($result_extract2['second_status'] == 'no') {
+                    echo "<td> Partially Vaccinated</td>";
+                }
+
+                else {
+                    echo "<td> Fully Vaccinated</td>";
+                }
+            }
             echo "</tr>";
         }
         

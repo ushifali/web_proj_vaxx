@@ -11,6 +11,7 @@
 }
 
 .home-section {
+    overflow-x: hidden;
     position: relative;
     background: #E4E9F7;
     left: 260px;
