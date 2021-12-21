@@ -255,6 +255,7 @@ session_start();
             <?php } else { ?>
                 <div id="already_filled">
                     <h2>You have already filled the form </h2>
+
                 </div>
             <?php } ?>
 

@@ -322,7 +322,12 @@ session_start();
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                     document.getElementById('pie_chat_for_vaccines_taken').innerHTML = '<canvas id="piechart"></canvas>';
 
+
+                    console.log(this.response);
                     var x = Array.from(this.response);
+                    console.log(x);
+                    
+                    
                     x = x.toString().replace(/\D/g, '');
                     console.log(x);
 
