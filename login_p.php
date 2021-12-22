@@ -25,8 +25,10 @@
         $_SESSION['usn'] = $username;
         header('Location: inputform.php');    
     }
+    
     else {
-        die( "Login failed. Please try again: Error: ");
+        echo( "Login failed. Please try again: Error: ");
+    header('Location: login.php');    
     }
 
 //for form filled session

@@ -26,9 +26,10 @@
 
     if (!$query) {
         echo "Couldnt sign-up. please try again: Error: " . mysqli_error($con);
+        header('Location: signup.php');
     }
 
-header('Location: login.php');
+    header('Location: login.php');
 
     mysqli_close($con);
 
