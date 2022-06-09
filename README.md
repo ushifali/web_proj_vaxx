@@ -1,4 +1,4 @@
-## Vaxx
+# Vaxx
 
 A simple website made to monitor the covid vaccination rate in college. 
 
